@@ -4,6 +4,7 @@
 #include <sys/mman.h>
 
 #define MIN4SPLIT 128
+#define MIN4MMAP 128 * 1024
 
 struct MallocMetadata;
 
@@ -20,6 +21,7 @@ struct MallocMetadata
 {
     size_t size;
     bool is_free;
+    bool is_mmap;
     struct MallocMetadata* next_by_memory;
     struct MallocMetadata* prev_by_memory;
     struct MallocMetadata* next_by_size;
@@ -29,7 +31,6 @@ struct MallocMetadata
 void insertBySize(struct MallocMetadata* ptr, size_t size)
 {
     struct MallocMetadata* itr = list_by_size;
-
     if(list_by_size == NULL)
     {
         list_by_size = ptr;
@@ -163,6 +164,8 @@ void splitBlock(struct MallocMetadata* ptr, size_t size)
         insertBySize(ptr, ptr->size);
         num_allocated_blocks++;
         num_allocated_bytes -= sizeof(struct MallocMetadata);
+        num_free_blocks++;
+        num_free_bytes += ptr->size;
     }
 }
 
@@ -189,6 +192,10 @@ struct MallocMetadata* enlargeTail(size_t size)
 
 void* smalloc(size_t size)
 {
+    if(size % 8 != 0) 
+    {
+        size += (8 - (size % 8)); // aligned to 8
+    }
     if(size == 0 || size > (size_t)pow(10,8))
     {
         return NULL;
@@ -207,13 +214,32 @@ void* smalloc(size_t size)
 
     if(itr == NULL)
     {
-        if(tail_by_memory && tail_by_memory->is_free)
+        if(size >= MIN4MMAP)
         {
+            void* ptr = mmap(NULL, size + sizeof(struct MallocMetadata), PROT_READ | PROT_WRITE, 
+                                MAP_PRIVATE | MAP_ANONYMOUS, 0, 0);
+            if(ptr == MAP_FAILED)
+            {
+                return NULL;
+            }
+            num_allocated_blocks++;
+            num_allocated_bytes += size;
+            itr = static_cast<struct MallocMetadata*>(ptr);
+            itr->is_mmap = true;
+            itr->size = size;
+            itr->next_by_memory = itr->next_by_size = 
+                itr->prev_by_memory = itr->prev_by_size = NULL;
+        }
+        else if(tail_by_memory && tail_by_memory->is_free)
+        {
+            size_t tail_size = tail_by_memory->size;
             itr = enlargeTail(size);
             if(itr == NULL)
             {
                 return NULL;
             }
+            num_free_blocks--;
+            num_free_bytes -= tail_size;
         }
         else
         {
@@ -229,6 +255,7 @@ void* smalloc(size_t size)
             {
                 list_by_memory = itr;
             }
+            itr->is_mmap = false;
             itr->size = size;
             itr->next_by_memory = NULL;
             itr->prev_by_memory = tail_by_memory;
@@ -257,7 +284,9 @@ void* smalloc(size_t size)
 
 void* scalloc(size_t num, size_t size)
 {
-    void* ptr = smalloc(num * size);
+    size_t new_size = num * size;
+
+    void* ptr = smalloc(new_size);
     if(ptr == NULL)
     {
         return NULL;
@@ -272,6 +301,12 @@ void sfree(void* p)
         return;
     struct MallocMetadata* mmd = static_cast<struct MallocMetadata*>(p);
     mmd--;
+    if(mmd->is_mmap)
+    {
+        if(munmap(mmd, sizeof(struct MallocMetadata) + mmd->size) < 0)
+            exit(1);
+        return;
+    }
     if(mmd->is_free)
     {
         return;
@@ -294,8 +329,16 @@ void* srealloc(void* oldp, size_t size)
     void* ptr;
     mmd--;
     size_t oldsize = mmd->size;
-    if(mmd->size >= size)
+    if(mmd->is_mmap)
+    {
+        if(mmd->size == size)
+        {
+            return oldp;
+        }
+    }
+    else if(mmd->size >= size)
     { 
+        splitBlock(mmd, size);
         return oldp;
     }
     else if(mmd->prev_by_memory && mmd->prev_by_memory->is_free &&
@@ -306,6 +349,7 @@ void* srealloc(void* oldp, size_t size)
         combineBlocksAUX(mmd->prev_by_memory, mmd, false, false);
         mmd = mmd->prev_by_memory;
         insertBySize(mmd, mmd->size);
+        splitBlock(mmd, size);
         mmd++;
         ptr = static_cast<void*>(mmd);
         std::memmove(ptr, oldp, oldsize);
@@ -319,6 +363,13 @@ void* srealloc(void* oldp, size_t size)
         {
             return NULL;
         }
+        if(mmd->is_free)
+        {
+            mmd->is_free = false;
+            num_free_blocks--;
+            num_free_bytes -= (size - enhance);
+        }
+        splitBlock(mmd, size); // maybe not needed
         return oldp;
     }
     else if(mmd->next_by_memory && mmd->next_by_memory->is_free &&
@@ -328,6 +379,7 @@ void* srealloc(void* oldp, size_t size)
         num_free_bytes -= mmd->next_by_memory->size;
         combineBlocksAUX(mmd, mmd->next_by_memory, false, false);
         insertBySize(mmd, mmd->size);
+        splitBlock(mmd, size);
         return oldp;
     }
     else if(mmd->prev_by_memory && mmd->next_by_memory && 
@@ -340,6 +392,7 @@ void* srealloc(void* oldp, size_t size)
         mmd = mmd->prev_by_memory;
         combineBlocksAUX(mmd, mmd->next_by_memory, true, false);
         insertBySize(mmd, mmd->size);
+        splitBlock(mmd, size);
         mmd++;
         ptr = static_cast<void*>(mmd);
         std::memmove(ptr, oldp, oldsize);
@@ -374,7 +427,7 @@ void* srealloc(void* oldp, size_t size)
         std::memmove(ptr, oldp, oldsize);
         return ptr;
     }
-    
+
     ptr = smalloc(size);
     if(ptr == NULL)
     {

@@ -36,6 +36,8 @@ void print(void) {
 }
 
 
+
+
 void test1() {
 	void* p1 = smalloc(10);
 	void* p2 = smalloc(20);
