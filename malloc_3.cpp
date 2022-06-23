@@ -13,6 +13,7 @@ static size_t num_allocated_bytes = 0;
 static struct MallocMetadata* list_by_memory = NULL;
 static struct MallocMetadata* tail_by_memory = NULL;
 static struct MallocMetadata* list_by_size = NULL;
+static struct MallocMetadata* tail_by_size = NULL;
 
 struct MallocMetadata
 {
@@ -24,75 +25,15 @@ struct MallocMetadata
     struct MallocMetadata* prev_by_size;
 };
 
-void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* next)
-{
-        current->size += next->size + sizeof(struct MallocMetadata);
-        num_allocated_blocks--;
-        num_allocated_bytes += sizeof(struct MallocMetadata);
-        struct MallocMetadata* prev_size = next->prev_by_size, *next_size = next->next_by_size;
-        if(prev_size)
-        {
-            prev_size->next_by_size = next_size;
-        }
-        if(next_size)
-        {
-            next_size->prev_by_size = prev_size;
-        }
-
-        prev_size = current->prev_by_size;
-        next_size = current->next_by_size;
-        if(prev_size)
-        {
-            prev_size->next_by_size = next_size;
-        }
-        if(next_size)
-        {
-            next_size->prev_by_size = prev_size;
-        }
-}
-
-void combineBlocks(struct MallocMetadata* ptr)
-{
-    struct MallocMetadata* prev = ptr->prev_by_memory, *next = ptr->next_by_memory;
-    bool prev_combine = false;
-    if(prev && prev->is_free)
-    {
-        prev_combine = true;
-        prev->size += ptr->size + sizeof(struct MallocMetadata);
-        num_allocated_blocks--;
-        num_allocated_bytes += sizeof(struct MallocMetadata);
-        struct MallocMetadata* prev_size = ptr->prev_by_size, *next_size = ptr->next_by_size;
-        if(prev_size)
-        {
-            prev_size->next_by_size = next_size;
-        }
-        if(next_size)
-        {
-            next_size->prev_by_size = prev_size;
-        }
-
-        prev_size = prev->prev_by_size;
-        next_size = prev->next_by_size;
-        if(prev_size)
-        {
-            prev_size->next_by_size = next_size;
-        }
-        if(next_size)
-        {
-            next_size->prev_by_size = prev_size;
-        }
-        ptr = prev;
-    }
-    if(next && next->is_free)
-    {
-        ptr->size += next->size + sizeof(struct MallocMetadata);
-
-    }
-}
-
 void insertBySize(struct MallocMetadata* ptr, size_t size)
 {
     struct MallocMetadata* itr = list_by_size;
+
+    if(list_by_size == NULL)
+    {
+        list_by_size = ptr;
+        return;
+    }
 
     while(itr != NULL)
     {
@@ -106,7 +47,7 @@ void insertBySize(struct MallocMetadata* ptr, size_t size)
             {
                 temp->prev_by_size = ptr;
             }
-            break;
+            return;
         }
         else if(itr->size > size) 
         {
@@ -118,9 +59,76 @@ void insertBySize(struct MallocMetadata* ptr, size_t size)
             {
                 temp->next_by_size = ptr;
             }
-            break;
+            return;
         }
         itr = itr->next_by_size;
+    }
+    // ptr is the biggest -> needs to be the tail of list_by_size -> tail_by_size
+    if(tail_by_size)
+    {
+        tail_by_size->next_by_size = ptr;
+    }
+    ptr->prev_by_size = tail_by_size;
+    tail_by_size = ptr;
+}
+
+void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* next, bool prev_combine)
+{
+    current->size += next->size + sizeof(struct MallocMetadata);
+    num_free_blocks--;
+    num_allocated_blocks--;
+    num_free_bytes += sizeof(struct MallocMetadata);
+    num_allocated_bytes += sizeof(struct MallocMetadata);
+
+    struct MallocMetadata* prev_size = next->prev_by_size, *next_size = next->next_by_size;
+    struct MallocMetadata* next_memory = next->next_by_memory;
+    if(next_memory)
+    {
+        next_memory->prev_by_memory = current;
+    }
+    current->next_by_memory = next_memory;
+    if(prev_size)
+    {
+        prev_size->next_by_size = next_size;
+    }
+    if(next_size)
+    {
+        next_size->prev_by_size = prev_size;
+    }
+
+    if(prev_combine == false)
+    {
+        prev_size = current->prev_by_size;
+        next_size = current->next_by_size;
+        if(prev_size)
+        {
+            prev_size->next_by_size = next_size;
+        }
+        if(next_size)
+        {
+            next_size->prev_by_size = prev_size;
+        }
+    }
+}
+
+void combineBlocks(struct MallocMetadata* ptr)
+{
+    struct MallocMetadata* prev = ptr->prev_by_memory, *next = ptr->next_by_memory;
+    bool combined = false;
+    if(prev && prev->is_free)
+    {
+        combineBlocksAUX(prev, ptr, combined);
+        combined = true;
+        ptr = prev;
+    }
+    if(next && next->is_free)
+    {
+        combineBlocksAUX(ptr, next, combined);
+        combined = true;
+    }
+    if(combined)
+    {
+        insertBySize(ptr, ptr->size);
     }
 }
 
@@ -174,33 +182,50 @@ void* smalloc(size_t size)
 
     if(itr == NULL)
     {
-        void* ptr = sbrk((intptr_t)(size + sizeof(struct MallocMetadata)));
-        if(ptr == (void*)(-1))
+        if(tail_by_memory && tail_by_memory->is_free)
         {
-            return NULL;
+            if(sbrk((intptr_t)(size - tail_by_memory->size)) == (void*)(-1))
+            {
+                return NULL;
+            }
+            tail_by_memory->size = size;
+            struct MallocMetadata* prev_size = tail_by_memory->prev_by_size, *next_size = tail_by_memory->next_by_size;
+            if(prev_size)
+            {
+                prev_size->next_by_size = next_size;
+            }
+            if(next_size)
+            {
+                next_size->prev_by_size = prev_size;
+            }
+            insertBySize(tail_by_memory, size);
         }
-        num_allocated_blocks++;
-        num_allocated_bytes += size;
-        itr = static_cast<struct MallocMetadata*>(ptr);
-        if(list_by_memory == NULL)
+        else
         {
-            list_by_memory = itr;
-        }
-        if(list_by_size == NULL)
-        {
-            list_by_size = itr;
-        }
-        itr->size = size;
-        itr->next_by_memory = NULL;
-        itr->prev_by_memory = tail_by_memory;
+            void* ptr = sbrk((intptr_t)(size + sizeof(struct MallocMetadata)));
+            if(ptr == (void*)(-1))
+            {
+                return NULL;
+            }
+            num_allocated_blocks++;
+            num_allocated_bytes += size;
+            itr = static_cast<struct MallocMetadata*>(ptr);
+            if(list_by_memory == NULL)
+            {
+                list_by_memory = itr;
+            }
+            itr->size = size;
+            itr->next_by_memory = NULL;
+            itr->prev_by_memory = tail_by_memory;
 
-        if(tail_by_memory != NULL)
-        {
-            tail_by_memory->next_by_memory = itr;
-        }
+            if(tail_by_memory != NULL)
+            {
+                tail_by_memory->next_by_memory = itr;
+            }
 
-        tail_by_memory = itr;
-        insertBySize(tail_by_memory, size);
+            tail_by_memory = itr;
+            insertBySize(tail_by_memory, size);
+        }
     }
     else
     {
