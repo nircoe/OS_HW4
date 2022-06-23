@@ -319,8 +319,8 @@ bool test10(void) {
 	sfree(p1);
 	ASSERT_TRUE(_num_free_blocks() == 0);
 	ASSERT_TRUE(_num_free_bytes() == 0);
-	ASSERT_TRUE(_num_allocated_blocks() == 1);
-	ASSERT_TRUE(_num_allocated_bytes() == (MMAP_THRESHOLD));
+	ASSERT_TRUE(_num_allocated_blocks() == 0);
+	ASSERT_TRUE(_num_allocated_bytes() == 0);
 	unsigned long d1 = (unsigned long)sbrk(0);
 	ASSERT_TRUE((d1 - base) == 0);
 	return true;

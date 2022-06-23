@@ -303,8 +303,11 @@ void sfree(void* p)
     mmd--;
     if(mmd->is_mmap)
     {
+        size_t size = mmd->size;
         if(munmap(mmd, sizeof(struct MallocMetadata) + mmd->size) < 0)
             exit(1);
+        num_allocated_blocks--;
+        num_allocated_bytes -= size;
         return;
     }
     if(mmd->is_free)
