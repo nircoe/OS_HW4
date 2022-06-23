@@ -29,7 +29,7 @@ void combineBlocks(struct MallocMetadata* ptr)
     struct MallocMetadata* prev = ptr->prev_by_memory, *next = ptr->next_by_memory;
     if(prev && prev->is_free)
     {
-        
+        prev->size += ptr->size + sizeof(struct MallocMetadata);
     }
 }
 
