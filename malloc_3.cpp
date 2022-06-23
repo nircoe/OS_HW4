@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <cstring>
 #include <cmath>
+#include <sys/mman.h>
 
 #define MIN4SPLIT 128
 
@@ -72,12 +73,15 @@ void insertBySize(struct MallocMetadata* ptr, size_t size)
     tail_by_size = ptr;
 }
 
-void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* next, bool prev_combine)
+void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* next, bool prev_combine, bool next_freed)
 {
     current->size += next->size + sizeof(struct MallocMetadata);
-    num_free_blocks--;
+    if(next_freed)
+    {
+        num_free_blocks--;
+        num_free_bytes += sizeof(struct MallocMetadata);
+    }
     num_allocated_blocks--;
-    num_free_bytes += sizeof(struct MallocMetadata);
     num_allocated_bytes += sizeof(struct MallocMetadata);
 
     struct MallocMetadata* prev_size = next->prev_by_size, *next_size = next->next_by_size;
@@ -117,13 +121,13 @@ void combineBlocks(struct MallocMetadata* ptr)
     bool combined = false;
     if(prev && prev->is_free)
     {
-        combineBlocksAUX(prev, ptr, combined);
+        combineBlocksAUX(prev, ptr, combined, true);
         combined = true;
         ptr = prev;
     }
     if(next && next->is_free)
     {
-        combineBlocksAUX(ptr, next, combined);
+        combineBlocksAUX(ptr, next, combined, true);
         combined = true;
     }
     if(combined)
@@ -162,6 +166,27 @@ void splitBlock(struct MallocMetadata* ptr, size_t size)
     }
 }
 
+struct MallocMetadata* enlargeTail(size_t size)
+{
+    if(sbrk((intptr_t)(size - tail_by_memory->size)) == (void*)(-1))
+    {
+        return NULL;
+    }
+    num_allocated_bytes += (size - tail_by_memory->size);
+    tail_by_memory->size = size;
+    struct MallocMetadata* prev_size = tail_by_memory->prev_by_size, *next_size = tail_by_memory->next_by_size;
+    if(prev_size)
+    {
+        prev_size->next_by_size = next_size;
+    }
+    if(next_size)
+    {
+        next_size->prev_by_size = prev_size;
+    }
+    insertBySize(tail_by_memory, size);
+    return tail_by_memory;
+}
+
 void* smalloc(size_t size)
 {
     if(size == 0 || size > (size_t)pow(10,8))
@@ -184,21 +209,11 @@ void* smalloc(size_t size)
     {
         if(tail_by_memory && tail_by_memory->is_free)
         {
-            if(sbrk((intptr_t)(size - tail_by_memory->size)) == (void*)(-1))
+            itr = enlargeTail(size);
+            if(itr == NULL)
             {
                 return NULL;
             }
-            tail_by_memory->size = size;
-            struct MallocMetadata* prev_size = tail_by_memory->prev_by_size, *next_size = tail_by_memory->next_by_size;
-            if(prev_size)
-            {
-                prev_size->next_by_size = next_size;
-            }
-            if(next_size)
-            {
-                next_size->prev_by_size = prev_size;
-            }
-            insertBySize(tail_by_memory, size);
         }
         else
         {
@@ -234,11 +249,10 @@ void* smalloc(size_t size)
     }
 
     itr->is_free = false;
-    struct MallocMetadata* p = static_cast<struct MallocMetadata*>(itr);
-    splitBlock(p, size);
-    p += 1;
-    void* r_p = static_cast<void *>(p);
-    return r_p;
+    splitBlock(itr, size);
+    itr += 1;
+    void* p = static_cast<void *>(itr);
+    return p;
 }
 
 void* scalloc(size_t num, size_t size)
@@ -277,11 +291,91 @@ void* srealloc(void* oldp, size_t size)
         return smalloc(size);
     }
     struct MallocMetadata* mmd = static_cast<struct MallocMetadata*>(oldp);
+    void* ptr;
     mmd--;
-
-    if(mmd->size >= size) 
+    size_t oldsize = mmd->size;
+    if(mmd->size >= size)
+    { 
         return oldp;
-    void* ptr = smalloc(size);
+    }
+    else if(mmd->prev_by_memory && mmd->prev_by_memory->is_free &&
+             ((mmd->prev_by_memory->size + sizeof(struct MallocMetadata) + mmd->size) >= size))
+    {
+        num_free_blocks--;
+        num_free_bytes -= mmd->prev_by_memory->size;
+        combineBlocksAUX(mmd->prev_by_memory, mmd, false, false);
+        mmd = mmd->prev_by_memory;
+        insertBySize(mmd, mmd->size);
+        mmd++;
+        ptr = static_cast<void*>(mmd);
+        std::memmove(ptr, oldp, oldsize);
+        return ptr;
+    }
+    else if(mmd == tail_by_memory)
+    {
+        size_t enhance = (size - tail_by_memory->size);
+        mmd = enlargeTail(size);
+        if(mmd == NULL)
+        {
+            return NULL;
+        }
+        return oldp;
+    }
+    else if(mmd->next_by_memory && mmd->next_by_memory->is_free &&
+             ((mmd->next_by_memory->size + sizeof(struct MallocMetadata) + mmd->size) >= size))
+    {
+        num_free_blocks--;
+        num_free_bytes -= mmd->next_by_memory->size;
+        combineBlocksAUX(mmd, mmd->next_by_memory, false, false);
+        insertBySize(mmd, mmd->size);
+        return oldp;
+    }
+    else if(mmd->prev_by_memory && mmd->next_by_memory && 
+            mmd->prev_by_memory->is_free && mmd->next_by_memory->is_free &&
+            ((mmd->prev_by_memory->size + 2*sizeof(struct MallocMetadata) + mmd->size + mmd->next_by_memory->size) >= size))
+    {
+        num_free_blocks -= 2;
+        num_free_bytes -= (mmd->prev_by_memory->size + mmd->next_by_memory->size);
+        combineBlocksAUX(mmd->prev_by_memory, mmd, false, false);
+        mmd = mmd->prev_by_memory;
+        combineBlocksAUX(mmd, mmd->next_by_memory, true, false);
+        insertBySize(mmd, mmd->size);
+        mmd++;
+        ptr = static_cast<void*>(mmd);
+        std::memmove(ptr, oldp, oldsize);
+        return ptr;
+    }
+    else if(mmd->next_by_memory && mmd->next_by_memory->is_free && (mmd->next_by_memory == tail_by_memory))
+    {
+        if(mmd->prev_by_memory && mmd->prev_by_memory->is_free) // needs to combine and enlarge
+        {
+            num_free_blocks -= 2;
+            num_free_bytes -= (mmd->prev_by_memory->size + mmd->next_by_memory->size);
+            combineBlocksAUX(mmd->prev_by_memory, mmd, false, false);
+            mmd = mmd->prev_by_memory;
+            combineBlocksAUX(mmd, mmd->next_by_memory, true, false);
+        }
+        else
+        {
+            num_free_blocks--;
+            num_free_bytes -= mmd->next_by_memory->size;
+            combineBlocksAUX(mmd, mmd->next_by_memory, false, false);
+        }
+
+        tail_by_memory = mmd;
+        mmd = enlargeTail(size);
+        if(mmd == NULL)
+        {
+            return NULL;
+        }
+        insertBySize(mmd, size);
+        mmd++;
+        ptr = static_cast<void*>(mmd);
+        std::memmove(ptr, oldp, oldsize);
+        return ptr;
+    }
+    
+    ptr = smalloc(size);
     if(ptr == NULL)
     {
         return NULL;
