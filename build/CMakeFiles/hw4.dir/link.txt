@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/hw4.dir/main.cpp.o  -o hw4 

@@ -33,7 +33,7 @@ void insertBySize(struct MallocMetadata* ptr, size_t size)
     struct MallocMetadata* itr = list_by_size;
     if(list_by_size == NULL)
     {
-        list_by_size = ptr;
+        list_by_size = tail_by_size = ptr;
         return;
     }
 
@@ -41,15 +41,37 @@ void insertBySize(struct MallocMetadata* ptr, size_t size)
     {
         if(itr->size == size)
         {
-            struct MallocMetadata* temp = itr->next_by_size;
-            itr->next_by_size = ptr;
-            ptr->prev_by_size = itr;
-            ptr->next_by_size = temp;
-            if(temp)
+            if(!(itr->next_by_size && itr->next_by_size->size == size))
             {
-                temp->prev_by_size = ptr;
+                if(ptr < itr)
+                {
+                    struct MallocMetadata* temp = itr->prev_by_size;
+                    itr->prev_by_size = ptr;
+                    ptr->next_by_size = itr;
+                    ptr->prev_by_size = temp;
+                    if(temp)
+                    {
+                        temp->next_by_size = ptr;
+                    }
+                    if(itr == list_by_size)
+                    {
+                        list_by_memory = ptr;
+                    }
+                }
+                else
+                {
+                    struct MallocMetadata* temp = itr->next_by_size;
+                    itr->next_by_size = ptr;
+                    ptr->prev_by_size = itr;
+                    ptr->next_by_size = temp;
+                    if(temp)
+                    {
+                        temp->prev_by_size = ptr;
+                    }
+                }
+                
+                return;
             }
-            return;
         }
         else if(itr->size > size) 
         {
@@ -60,6 +82,10 @@ void insertBySize(struct MallocMetadata* ptr, size_t size)
             if(temp)
             {
                 temp->next_by_size = ptr;
+            }
+            if(list_by_size == itr)
+            {
+                list_by_size = ptr;
             }
             return;
         }
@@ -84,6 +110,11 @@ void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* nex
     }
     num_allocated_blocks--;
     num_allocated_bytes += sizeof(struct MallocMetadata);
+    if(next == tail_by_memory)
+    {
+        tail_by_memory = current;
+    }
+    
 
     struct MallocMetadata* prev_size = next->prev_by_size, *next_size = next->next_by_size;
     struct MallocMetadata* next_memory = next->next_by_memory;
@@ -100,6 +131,12 @@ void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* nex
     {
         next_size->prev_by_size = prev_size;
     }
+    if(current == list_by_size || next == list_by_size)
+    {
+        list_by_size = next_size;
+    }
+    next->prev_by_size = NULL;
+    next->next_by_size = NULL;
 
     if(prev_combine == false)
     {
@@ -113,6 +150,9 @@ void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* nex
         {
             next_size->prev_by_size = prev_size;
         }
+
+        current->prev_by_size = NULL;
+        current->next_by_size = NULL;
     }
 }
 
@@ -139,19 +179,20 @@ void combineBlocks(struct MallocMetadata* ptr)
 
 void splitBlock(struct MallocMetadata* ptr, size_t size)
 {
+    if((size + sizeof(struct MallocMetadata)) > ptr->size) return;
     struct MallocMetadata* backup = ptr;
-    size_t split_size = ptr->size - size;
-    if(split_size >= MIN4SPLIT && split_size > sizeof(struct MallocMetadata))
+    size_t split_size = ptr->size - size - sizeof(struct MallocMetadata);
+    if(split_size >= MIN4SPLIT)
     {
         ptr->size = size;
         ptr++;
         void* temp = static_cast<void*>(ptr);
         char* p = static_cast<char*>(temp);
-        p += size;
+        p += backup->size;
         temp = static_cast<void*>(p);
         ptr = static_cast<struct MallocMetadata*>(temp);
         ptr->is_free = true;
-        ptr->size = split_size - sizeof(struct MallocMetadata);
+        ptr->size = split_size;
         struct MallocMetadata* next = backup->next_by_memory;
         if(next)
         {
@@ -160,12 +201,22 @@ void splitBlock(struct MallocMetadata* ptr, size_t size)
         }
         ptr->prev_by_memory = backup;
         backup->next_by_memory = ptr;
+        if(tail_by_memory == backup)
+        {
+            tail_by_memory = ptr;
+        }
 
         insertBySize(ptr, ptr->size);
         num_allocated_blocks++;
         num_allocated_bytes -= sizeof(struct MallocMetadata);
         num_free_blocks++;
         num_free_bytes += ptr->size;
+
+        if(ptr->next_by_memory && ptr->next_by_memory->is_free)
+        {
+            combineBlocksAUX(ptr, ptr->next_by_memory, false, true);
+            insertBySize(ptr, ptr->size);
+        }
     }
 }
 
@@ -276,7 +327,10 @@ void* smalloc(size_t size)
     }
 
     itr->is_free = false;
-    splitBlock(itr, size);
+    if(itr->size != size)
+    {
+        splitBlock(itr, size);
+    }
     itr += 1;
     void* p = static_cast<void *>(itr);
     return p;
@@ -344,19 +398,34 @@ void* srealloc(void* oldp, size_t size)
         splitBlock(mmd, size);
         return oldp;
     }
-    else if(mmd->prev_by_memory && mmd->prev_by_memory->is_free &&
-             ((mmd->prev_by_memory->size + sizeof(struct MallocMetadata) + mmd->size) >= size))
+    else if(mmd->prev_by_memory && mmd->prev_by_memory->is_free && 
+            (((mmd->prev_by_memory->size + sizeof(struct MallocMetadata) + mmd->size) >= size) || (mmd == tail_by_memory)))
     {
+        bool enlarge_flag = false;
+        if(mmd == tail_by_memory && !((mmd->prev_by_memory->size + sizeof(struct MallocMetadata) + mmd->size) >= size))
+        {
+            enlarge_flag = true;
+        }
         num_free_blocks--;
         num_free_bytes -= mmd->prev_by_memory->size;
         combineBlocksAUX(mmd->prev_by_memory, mmd, false, false);
         mmd = mmd->prev_by_memory;
+        if(enlarge_flag)
+        {
+            mmd = enlargeTail(size);
+            if(mmd == NULL)
+            {
+                return NULL;
+            }
+            mmd->is_free = false;
+        }
         insertBySize(mmd, mmd->size);
         splitBlock(mmd, size);
         mmd++;
         ptr = static_cast<void*>(mmd);
         std::memmove(ptr, oldp, oldsize);
         return ptr;
+        
     }
     else if(mmd == tail_by_memory)
     {
