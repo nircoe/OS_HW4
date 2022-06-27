@@ -36,11 +36,11 @@ UpdateVersionOnly:
 
 # CVS options
 # Default is "-d -P -A"
-CVSCommand: CVSCOMMAND-NOTFOUND
-CVSUpdateOptions: -d -A -P
+CVSCommand: 
+CVSUpdateOptions: 
 
 # Subversion options
-SVNCommand: SVNCOMMAND-NOTFOUND
+SVNCommand: 
 SVNOptions: 
 SVNUpdateOptions: 
 
@@ -51,7 +51,7 @@ GITUpdateOptions:
 GITUpdateCustom: 
 
 # Perforce options
-P4Command: P4COMMAND-NOTFOUND
+P4Command: 
 P4Client: 
 P4Options: 
 P4UpdateOptions: 

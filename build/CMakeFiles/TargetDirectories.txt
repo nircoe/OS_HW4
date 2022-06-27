@@ -1,5 +1,3 @@
-/home/student/Desktop/OS_HW4/build/CMakeFiles/package.dir
-/home/student/Desktop/OS_HW4/build/CMakeFiles/package_source.dir
 /home/student/Desktop/OS_HW4/build/CMakeFiles/edit_cache.dir
 /home/student/Desktop/OS_HW4/build/CMakeFiles/rebuild_cache.dir
 /home/student/Desktop/OS_HW4/build/tests/CMakeFiles/Experimental.dir
@@ -33,17 +31,11 @@
 /home/student/Desktop/OS_HW4/build/tests/CMakeFiles/malloc_1_test.dir
 /home/student/Desktop/OS_HW4/build/tests/CMakeFiles/malloc_2_test.dir
 /home/student/Desktop/OS_HW4/build/tests/CMakeFiles/malloc_3_test.dir
-/home/student/Desktop/OS_HW4/build/tests/CMakeFiles/package.dir
-/home/student/Desktop/OS_HW4/build/tests/CMakeFiles/package_source.dir
 /home/student/Desktop/OS_HW4/build/tests/CMakeFiles/edit_cache.dir
 /home/student/Desktop/OS_HW4/build/tests/CMakeFiles/rebuild_cache.dir
-/home/student/Desktop/OS_HW4/build/_deps/catch2-build/CMakeFiles/package.dir
-/home/student/Desktop/OS_HW4/build/_deps/catch2-build/CMakeFiles/package_source.dir
 /home/student/Desktop/OS_HW4/build/_deps/catch2-build/CMakeFiles/edit_cache.dir
 /home/student/Desktop/OS_HW4/build/_deps/catch2-build/CMakeFiles/rebuild_cache.dir
 /home/student/Desktop/OS_HW4/build/_deps/catch2-build/src/CMakeFiles/Catch2.dir
 /home/student/Desktop/OS_HW4/build/_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
-/home/student/Desktop/OS_HW4/build/_deps/catch2-build/src/CMakeFiles/package.dir
-/home/student/Desktop/OS_HW4/build/_deps/catch2-build/src/CMakeFiles/package_source.dir
 /home/student/Desktop/OS_HW4/build/_deps/catch2-build/src/CMakeFiles/edit_cache.dir
 /home/student/Desktop/OS_HW4/build/_deps/catch2-build/src/CMakeFiles/rebuild_cache.dir

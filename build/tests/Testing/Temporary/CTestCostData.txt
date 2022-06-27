@@ -1,109 +1,89 @@
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_3.free 4 0.00150359
-malloc_1.Sanity 1 0.021756
-malloc_1.Check size 1 0.00517609
-malloc_1.0 size 1 0.00474394
-malloc_1.Max size 1 0.00466823
-malloc_2.Sanity 1 0.016655
-malloc_2.Check size 1 0.00478896
-malloc_2.0 size 1 0.00477322
-malloc_2.Max size 1 0.00574534
-malloc_2.free 1 0.00486057
-malloc_2.free 2 1 0.00510223
-malloc_2.free 3 1 0.00472093
-malloc_2.Reuse 1 0.00521838
-malloc_2.Reuse two blocks 1 0.00554015
-malloc_2.Reuse two blocks reverse 1 0.00547194
-malloc_2.Reuse two blocks both 1 0.00452725
-malloc_2.Reuse two blocks sizes small 1 0.00570855
-malloc_2.Reuse two blocks sizes large 1 0.00530289
-malloc_2.scalloc 1 0.005775
-malloc_2.scalloc taint 1 0.00470641
-malloc_2.scalloc 0 size 1 0.00486982
-malloc_2.scalloc Max size num 1 0.0671404
-malloc_2.scalloc Max size size 1 0.0580681
-malloc_2.scalloc Max size both 1 0.0542032
-malloc_2.realloc 1 0.00528571
-malloc_2.realloc shrink 1 0.00482799
-malloc_2.srealloc Max size 1 0.00614494
-malloc_3.Sanity 1 0.0162761
-malloc_3.Check size 1 0.0056082
-malloc_3.0 size 1 0.00761936
-malloc_3.Max size 1 0.00588441
-malloc_3.free 2 1 0.00600865
-malloc_3.free 3 1 0.00755071
-malloc_3.free holes 1 1 0.00857584
-malloc_3.free holes 2 1 0.0249928
-malloc_3.free holes 3 1 0.0081372
-malloc_3.Wilderness available 1 0.00720605
-malloc_3.Wilderness available pad 1 0.0075937
-malloc_3.Large allocation 1 0.0058233
-malloc_3.Large unaligned allocation 1 0.00765075
-malloc_3.Alignment 1 0.00654601
-malloc_3.Alignment unaligned base 0 0
-malloc_3.Alignment MMAP 1 0.00669798
-malloc_3.Reuse 1 0.0058042
-malloc_3.Reuse two blocks 1 0.00915717
-malloc_3.Reuse two blocks reverse 1 0.00878109
-malloc_3.Reuse two blocks both 1 0.00711908
-malloc_3.Reuse two blocks sizes small 1 0.00841966
-malloc_3.Reuse two blocks sizes small reversed 1 0.00514844
-malloc_3.Reuse two blocks sizes large 1 0.00688178
-malloc_3.scalloc 1 0.00716748
-malloc_3.scalloc taint 1 0.00554561
-malloc_3.scalloc 0 size 1 0.00521259
-malloc_3.scalloc Max size num 1 0.0538313
-malloc_3.scalloc Max size size 1 0.0554909
-malloc_3.scalloc Max size both 1 0.0592497
-malloc_3.Split block 1 0.00491468
-malloc_3.Split block under threshold 1 0.00475568
-malloc_3.Split block threshold 1 0.00642128
-malloc_3.Merge with prev block 1 0.00655657
-malloc_3.Merge with prev block pad 1 0.00510506
-malloc_3.Merge with next block 1 0.00465787
-malloc_3.Merge with next block pad 1 0.00503546
-malloc_3.Merge with both blocks 1 0.00530139
-malloc_3.Merge with both blocks pad 1 0.00492028
-malloc_3.realloc 1 0.00490889
-malloc_3.realloc shrink 1 0.00669321
-malloc_3.srealloc Max size 1 0.00515859
-malloc_3.srealloc case a 1 0.00565783
-malloc_3.srealloc case a split 0 0
-malloc_3.srealloc case a mmap 0 0
-malloc_3.srealloc case b 0 0
-malloc_3.srealloc case b metadata 0 0
-malloc_3.srealloc case b split 0 0
-malloc_3.srealloc case b wilderness 1 0.00498025
-malloc_3.srealloc case b wilderness 2 1 0.00578207
-malloc_3.srealloc case c 1 0.00456674
-malloc_3.srealloc case c 2 1 0.00477276
-malloc_3.srealloc case d 1 0.00499765
-malloc_3.srealloc case d metadata 1 0.00644339
-malloc_3.srealloc case d split 1 0.00515513
-malloc_3.srealloc case e 0 0
-malloc_3.srealloc case e no pad 0 0
-malloc_3.srealloc case e split 0 0
-malloc_3.srealloc case fi 0 0
-malloc_3.srealloc case fii 1 0.00493693
-malloc_3.srealloc case g 1 0.0103137
-malloc_3.srealloc case h 1 0.00460091
+malloc_1.Sanity 1 0.00371112
+malloc_1.Check size 1 0.00391576
+malloc_1.0 size 1 0.00329248
+malloc_1.Max size 1 0.00391091
+malloc_2.Sanity 1 0.00418929
+malloc_2.Check size 1 0.003614
+malloc_2.0 size 1 0.00370679
+malloc_2.Max size 1 0.00363525
+malloc_2.free 1 0.00437948
+malloc_2.free 2 1 0.00409509
+malloc_2.free 3 1 0.00363034
+malloc_2.Reuse 1 0.00371936
+malloc_2.Reuse two blocks 1 0.00411662
+malloc_2.Reuse two blocks reverse 1 0.00402611
+malloc_2.Reuse two blocks both 1 0.00434676
+malloc_2.Reuse two blocks sizes small 1 0.00412575
+malloc_2.Reuse two blocks sizes large 1 0.00579674
+malloc_2.scalloc 1 0.00376168
+malloc_2.scalloc taint 1 0.00570263
+malloc_2.scalloc 0 size 1 0.0039246
+malloc_2.scalloc Max size num 1 0.135691
+malloc_2.scalloc Max size size 1 0.0594552
+malloc_2.scalloc Max size both 1 0.0485804
+malloc_2.realloc 1 0.0039711
+malloc_2.realloc shrink 1 0.00395198
+malloc_2.srealloc Max size 1 0.003858
+malloc_3.Sanity 1 0.00456468
+malloc_3.Check size 1 0.0046829
+malloc_3.0 size 1 0.00416597
+malloc_3.Max size 1 0.0044207
+malloc_3.free 1 0.00436233
+malloc_3.free 2 1 0.0036716
+malloc_3.free 3 1 0.00383312
+malloc_3.free holes 1 1 0.00491431
+malloc_3.free holes 2 1 0.00402927
+malloc_3.free holes 3 1 0.0038813
+malloc_3.Wilderness available 1 0.0043338
+malloc_3.Wilderness available pad 1 0.00416902
+malloc_3.Large allocation 1 0.00376903
+malloc_3.Large unaligned allocation 1 0.0044761
+malloc_3.Alignment 1 0.0047656
+malloc_3.Alignment unaligned base 1 0.00406553
+malloc_3.Alignment MMAP 1 0.00393358
+malloc_3.Reuse 1 0.00422724
+malloc_3.Reuse two blocks 1 0.00392818
+malloc_3.Reuse two blocks reverse 1 0.00383537
+malloc_3.Reuse two blocks both 1 0.00439344
+malloc_3.Reuse two blocks sizes small 1 0.00482274
+malloc_3.Reuse two blocks sizes small reversed 1 0.00430735
+malloc_3.Reuse two blocks sizes large 1 0.00405733
+malloc_3.scalloc 1 0.00429666
+malloc_3.scalloc taint 1 0.00375488
+malloc_3.scalloc 0 size 1 0.00364627
+malloc_3.scalloc Max size num 1 0.0485031
+malloc_3.scalloc Max size size 1 0.0468473
+malloc_3.scalloc Max size both 1 0.0533788
+malloc_3.Split block 1 0.00401599
+malloc_3.Split block under threshold 1 0.00373914
+malloc_3.Split block threshold 1 0.00431708
+malloc_3.Merge with prev block 1 0.0036444
+malloc_3.Merge with prev block pad 1 0.0221326
+malloc_3.Merge with next block 1 0.00423357
+malloc_3.Merge with next block pad 1 0.0040855
+malloc_3.Merge with both blocks 1 0.00417657
+malloc_3.Merge with both blocks pad 1 0.00371715
+malloc_3.realloc 1 0.00395534
+malloc_3.realloc shrink 1 0.00497204
+malloc_3.srealloc Max size 1 0.00373512
+malloc_3.srealloc case a 1 0.00366364
+malloc_3.srealloc case a split 1 0.00375766
+malloc_3.srealloc case a mmap 1 0.0220004
+malloc_3.srealloc case b 1 0.00376729
+malloc_3.srealloc case b metadata 1 0.00460907
+malloc_3.srealloc case b split 1 0.00409753
+malloc_3.srealloc case b wilderness 1 0.003952
+malloc_3.srealloc case b wilderness 2 1 0.00375271
+malloc_3.srealloc case c 1 0.00467056
+malloc_3.srealloc case c 2 1 0.00432573
+malloc_3.srealloc case d 1 0.0035886
+malloc_3.srealloc case d metadata 1 0.00404713
+malloc_3.srealloc case d split 1 0.00404033
+malloc_3.srealloc case e 1 0.00399038
+malloc_3.srealloc case e no pad 1 0.00375977
+malloc_3.srealloc case e split 1 0.00378573
+malloc_3.srealloc case fi 1 0.00444511
+malloc_3.srealloc case fii 1 0.00395326
+malloc_3.srealloc case g 1 0.00365074
+malloc_3.srealloc case h 1 0.00363624
 ---
-malloc_3.Alignment unaligned base
-malloc_3.srealloc case a split
-malloc_3.srealloc case a mmap
-malloc_3.srealloc case b
-malloc_3.srealloc case b metadata
-malloc_3.srealloc case b split
-malloc_3.srealloc case e
-malloc_3.srealloc case e no pad
-malloc_3.srealloc case e split
-malloc_3.srealloc case fi

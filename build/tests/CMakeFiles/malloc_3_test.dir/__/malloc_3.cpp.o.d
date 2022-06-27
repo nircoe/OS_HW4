@@ -63,4 +63,12 @@ tests/CMakeFiles/malloc_3_test.dir/__/malloc_3.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/mman.h \
  /usr/include/x86_64-linux-gnu/bits/mman.h \
  /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
- /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h

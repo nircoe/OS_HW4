@@ -17,9 +17,6 @@
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
 
-//Path to a program.
-BZRCOMMAND:FILEPATH=BZRCOMMAND-NOTFOUND
-
 //Read docs/configuration.md for details
 CATCH_CONFIG_ANDROID_LOGWRITE:BOOL=OFF
 
@@ -192,20 +189,19 @@ CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-7
 // for the GCC compiler
 CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-7
 
-//Flags used by the compiler during all build types.
+//Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
-//Flags used by the compiler during debug builds.
+//Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
 
-//Flags used by the compiler during release builds for minimum
-// size.
+//Flags used by the CXX compiler during MINSIZEREL builds.
 CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
 
-//Flags used by the compiler during release builds.
+//Flags used by the CXX compiler during RELEASE builds.
 CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
-//Flags used by the compiler during release builds with debug info.
+//Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
@@ -219,38 +215,37 @@ CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-7
 // for the GCC compiler
 CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-7
 
-//Flags used by the compiler during all build types.
+//Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
 
-//Flags used by the compiler during debug builds.
+//Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
 
-//Flags used by the compiler during release builds for minimum
-// size.
+//Flags used by the C compiler during MINSIZEREL builds.
 CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
 
-//Flags used by the compiler during release builds.
+//Flags used by the C compiler during RELEASE builds.
 CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
-//Flags used by the compiler during release builds with debug info.
+//Flags used by the C compiler during RELWITHDEBINFO builds.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
-//Flags used by the linker.
+//Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=
 
-//Flags used by the linker during debug builds.
+//Flags used by the linker during DEBUG builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
 
-//Flags used by the linker during release minsize builds.
+//Flags used by the linker during MINSIZEREL builds.
 CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=
 
-//Flags used by the linker during release builds.
+//Flags used by the linker during RELEASE builds.
 CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 
-//Flags used by the linker during Release with Debug Info builds.
+//Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //No help, variable specified on the command line.
@@ -313,19 +308,24 @@ CMAKE_LINKER:FILEPATH=/usr/bin/ld
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
-//Flags used by the linker during the creation of modules.
+//Flags used by the linker during the creation of modules during
+// all build types.
 CMAKE_MODULE_LINKER_FLAGS:STRING=
 
-//Flags used by the linker during debug builds.
+//Flags used by the linker during the creation of modules during
+// DEBUG builds.
 CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
 
-//Flags used by the linker during release minsize builds.
+//Flags used by the linker during the creation of modules during
+// MINSIZEREL builds.
 CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL:STRING=
 
-//Flags used by the linker during release builds.
+//Flags used by the linker during the creation of modules during
+// RELEASE builds.
 CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 
-//Flags used by the linker during Release with Debug Info builds.
+//Flags used by the linker during the creation of modules during
+// RELWITHDEBINFO builds.
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
@@ -347,16 +347,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=os-hw3
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=3.0.1
+CMAKE_PROJECT_VERSION:STATIC=0.1.0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MAJOR:STATIC=3
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=0
+CMAKE_PROJECT_VERSION_MINOR:STATIC=1
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=1
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -367,19 +367,24 @@ CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 //Path to a program.
 CMAKE_READELF:FILEPATH=/usr/bin/readelf
 
-//Flags used by the linker during the creation of dll's.
+//Flags used by the linker during the creation of shared libraries
+// during all build types.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
 
-//Flags used by the linker during debug builds.
+//Flags used by the linker during the creation of shared libraries
+// during DEBUG builds.
 CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
 
-//Flags used by the linker during release minsize builds.
+//Flags used by the linker during the creation of shared libraries
+// during MINSIZEREL builds.
 CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL:STRING=
 
-//Flags used by the linker during release builds.
+//Flags used by the linker during the creation of shared libraries
+// during RELEASE builds.
 CMAKE_SHARED_LINKER_FLAGS_RELEASE:STRING=
 
-//Flags used by the linker during Release with Debug Info builds.
+//Flags used by the linker during the creation of shared libraries
+// during RELWITHDEBINFO builds.
 CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //If set, runtime paths are not added when installing shared libraries,
@@ -389,19 +394,24 @@ CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
 //If set, runtime paths are not added when using shared libraries.
 CMAKE_SKIP_RPATH:BOOL=NO
 
-//Flags used by the linker during the creation of static libraries.
+//Flags used by the linker during the creation of static libraries
+// during all build types.
 CMAKE_STATIC_LINKER_FLAGS:STRING=
 
-//Flags used by the linker during debug builds.
+//Flags used by the linker during the creation of static libraries
+// during DEBUG builds.
 CMAKE_STATIC_LINKER_FLAGS_DEBUG:STRING=
 
-//Flags used by the linker during release minsize builds.
+//Flags used by the linker during the creation of static libraries
+// during MINSIZEREL builds.
 CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL:STRING=
 
-//Flags used by the linker during release builds.
+//Flags used by the linker during the creation of static libraries
+// during RELEASE builds.
 CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 
-//Flags used by the linker during Release with Debug Info builds.
+//Flags used by the linker during the creation of static libraries
+// during RELWITHDEBINFO builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
@@ -474,12 +484,6 @@ CTEST_SUBMIT_RETRY_COUNT:STRING=3
 //How long to wait between timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_DELAY:STRING=5
 
-//Path to a program.
-CVSCOMMAND:FILEPATH=CVSCOMMAND-NOTFOUND
-
-//Options passed to the cvs update command.
-CVS_UPDATE_OPTIONS:STRING=-d -A -P
-
 //Dependencies for the target
 Catch2WithMain_LIB_DEPENDS:STATIC=general;Catch2;
 
@@ -521,9 +525,6 @@ GITCOMMAND:FILEPATH=/usr/bin/git
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
-//Path to a program.
-HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
-
 //Command to build the project
 MAKECOMMAND:STRING=/usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 
@@ -533,30 +534,17 @@ MEMORYCHECK_COMMAND:FILEPATH=/usr/bin/valgrind
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
-//Path to a program.
-P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
-
-//Path to scp command, used by CTest for submitting results to
-// a Dart server
-SCPCOMMAND:FILEPATH=/usr/bin/scp
-
 //Name of the computer/site where compile is being run
 SITE:STRING=pc
 
-//Path to the SLURM sbatch executable
-SLURM_SBATCH_COMMAND:FILEPATH=SLURM_SBATCH_COMMAND-NOTFOUND
-
-//Path to the SLURM srun executable
-SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
-
-//Path to a program.
-SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
+//Value Computed by CMake
+hw4Niv_BINARY_DIR:STATIC=/home/student/Desktop/OS_HW4/build
 
 //Value Computed by CMake
-hw4_BINARY_DIR:STATIC=/home/student/Desktop/OS_HW4/build
+hw4Niv_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-hw4_SOURCE_DIR:STATIC=/home/student/Desktop/OS_HW4
+hw4Niv_SOURCE_DIR:STATIC=/home/student/Desktop/OS_HW4
 
 //Value Computed by CMake
 os-hw3-tests_BINARY_DIR:STATIC=/home/student/Desktop/OS_HW4/build/tests
@@ -581,8 +569,6 @@ os-hw3_SOURCE_DIR:STATIC=/home/student/Desktop/OS_HW4
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: BZRCOMMAND
-BZRCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -651,8 +637,6 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
@@ -800,10 +784,6 @@ CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CVSCOMMAND
-CVSCOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CVS_UPDATE_OPTIONS
-CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //Project GUID
 Catch2WithMain_GUID_CMAKE:INTERNAL=8bd3552a-2cfb-4a59-ab15-2031b97ada1e
 //Project GUID
@@ -814,26 +794,14 @@ DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: HGCOMMAND
-HGCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
 MAKECOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_COMMAND
 MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: P4COMMAND
-P4COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SCPCOMMAND
-SCPCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SLURM_SBATCH_COMMAND
-SLURM_SBATCH_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SLURM_SRUN_COMMAND
-SLURM_SRUN_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SVNCOMMAND
-SVNCOMMAND-ADVANCED:INTERNAL=1
 //Catch2 full path to CatchAddTests.cmake helper file
 _CATCH_DISCOVER_TESTS_SCRIPT:INTERNAL=/home/student/Desktop/OS_HW4/build/_deps/catch2-src/extras/CatchAddTests.cmake
 //CMAKE_INSTALL_PREFIX during last run

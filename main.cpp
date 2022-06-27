@@ -565,7 +565,42 @@ void test_srealloc_common_sizes_g()
     s.compare(1,20000+ 3*MD_SIZE,4,50000 + 2*20000 + 15000 + 5000 + 3*MD_SIZE, 4*MD_SIZE,MD_SIZE,__LINE__);
 
 }
-#define NUM_TESTS 17
+void test_almog_nadav()
+{
+    Stats s;
+
+    void *base = sbrk(0);
+    char *a = (char *)smalloc(32);
+    char *b = (char *)smalloc(32);
+    char *c = (char *)smalloc(128 + 32);
+
+    s.set();
+    s.compare(0, 0, 3, 64 + 128 + 32, 3 * MD_SIZE, MD_SIZE, __LINE__);
+
+    sfree(c);
+    
+    s.set();
+    s.compare(1, 128 + 32, 3, 64 + 128 + 32, 3 * MD_SIZE, MD_SIZE, __LINE__);
+
+    char *new_b = (char *)srealloc(b, 64);
+
+    s.set();
+    s.compare(1, 128, 3, 64 + 128 + 32, 3 * MD_SIZE, MD_SIZE, __LINE__);
+
+    sfree(new_b);
+
+    s.set();
+    s.compare(1, 128 + 32 * 2 + MD_SIZE, 2, 128 + 32 * 3 + MD_SIZE, 2 * MD_SIZE, MD_SIZE, __LINE__);
+
+
+    sfree(a);
+
+    s.set();
+    s.compare(1, 128 + 96 + 2 * MD_SIZE, 1, 128 + 32 * 3 + 2 * MD_SIZE, 1 * MD_SIZE, MD_SIZE, __LINE__);
+
+}
+
+#define NUM_TESTS 18
 
 void (*tests[NUM_TESTS])(void) = {
 	test_challenge_1,
@@ -584,7 +619,8 @@ void (*tests[NUM_TESTS])(void) = {
     test_srealloc_common_sizes_e2,
     test_srealloc_common_sizes_f_i,
     test_srealloc_common_sizes_f_ii,
-    test_srealloc_common_sizes_g
+    test_srealloc_common_sizes_g,
+    test_almog_nadav
 };
 string tests_string[NUM_TESTS] = {
 	"test_challenge_1",
@@ -608,7 +644,7 @@ string tests_string[NUM_TESTS] = {
 
 int main(int argc,char* argv[]) {
 
-    //test_srealloc_common_sizes_b1();
+    //test_challenge_1();
 
     for(int i = 0; i < NUM_TESTS; i++)
     {

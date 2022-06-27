@@ -2,6 +2,7 @@
 #include <cstring>
 #include <cmath>
 #include <sys/mman.h>
+#include <stdio.h>
 
 #define MIN4SPLIT 128
 #define MIN4MMAP 128 * 1024
@@ -97,6 +98,7 @@ void insertBySize(struct MallocMetadata* ptr, size_t size)
         tail_by_size->next_by_size = ptr;
     }
     ptr->prev_by_size = tail_by_size;
+    ptr->next_by_size = NULL;
     tail_by_size = ptr;
 }
 
@@ -114,7 +116,14 @@ void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* nex
     {
         tail_by_memory = current;
     }
-    
+    if(next == tail_by_size)
+    {
+        tail_by_size = tail_by_size->prev_by_size;
+    }
+    if(current == tail_by_size)
+    {
+        tail_by_size = tail_by_size->prev_by_size;
+    }
 
     struct MallocMetadata* prev_size = next->prev_by_size, *next_size = next->next_by_size;
     struct MallocMetadata* next_memory = next->next_by_memory;
@@ -127,7 +136,7 @@ void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* nex
     {
         prev_size->next_by_size = next_size;
     }
-    if(next_size)
+    if((tail_by_size != next) && next_size)
     {
         next_size->prev_by_size = prev_size;
     }
@@ -137,12 +146,11 @@ void combineBlocksAUX(struct MallocMetadata* current, struct MallocMetadata* nex
     }
     next->prev_by_size = NULL;
     next->next_by_size = NULL;
-
     if(prev_combine == false)
     {
         prev_size = current->prev_by_size;
         next_size = current->next_by_size;
-        if(prev_size)
+        if((list_by_size != current) && prev_size)
         {
             prev_size->next_by_size = next_size;
         }
@@ -196,22 +204,43 @@ void splitBlock(struct MallocMetadata* ptr, size_t size)
         struct MallocMetadata* next = backup->next_by_memory;
         if(next)
         {
-            next->prev_by_memory = ptr;
-            ptr->next_by_memory = next;
+            next->prev_by_memory = ptr;    
         }
+        ptr->next_by_memory = next;
         ptr->prev_by_memory = backup;
         backup->next_by_memory = ptr;
         if(tail_by_memory == backup)
         {
+            ptr->next_by_memory = NULL;
             tail_by_memory = ptr;
         }
 
+        struct MallocMetadata* next_size = backup->next_by_size, *prev_size = backup->prev_by_size;
+        if(next_size)
+        {
+            next_size->prev_by_size = prev_size;
+        }
+        if(prev_size)
+        {
+            prev_size->next_by_size = next_size;
+        }
+        if(backup == tail_by_size)
+        {
+            tail_by_size = prev_size;
+        }
+        backup->next_by_size = NULL;
+        backup->prev_by_size = NULL;
+        if(backup == list_by_size)
+        {
+            list_by_size = NULL;
+        }
+
+        insertBySize(backup, backup->size);
         insertBySize(ptr, ptr->size);
         num_allocated_blocks++;
         num_allocated_bytes -= sizeof(struct MallocMetadata);
         num_free_blocks++;
         num_free_bytes += ptr->size;
-
         if(ptr->next_by_memory && ptr->next_by_memory->is_free)
         {
             combineBlocksAUX(ptr, ptr->next_by_memory, false, true);
@@ -294,6 +323,15 @@ void* smalloc(size_t size)
         }
         else
         {
+            void* base = sbrk(0);
+            if((size_t)base % 8 != 0)
+            {
+                base = sbrk((intptr_t)(8 - ((size_t)base % 8)));
+                if(base == (void*)(-1))
+                {
+                    return NULL;
+                }
+            }
             void* ptr = sbrk((intptr_t)(size + sizeof(struct MallocMetadata)));
             if(ptr == (void*)(-1))
             {
@@ -390,12 +428,14 @@ void* srealloc(void* oldp, size_t size)
     {
         if(mmd->size == size)
         {
+            mmd->is_free = false;
             return oldp;
         }
     }
     else if(mmd->size >= size)
     { 
         splitBlock(mmd, size);
+        mmd->is_free = false;
         return oldp;
     }
     else if(mmd->prev_by_memory && mmd->prev_by_memory->is_free && 
@@ -421,6 +461,7 @@ void* srealloc(void* oldp, size_t size)
         }
         insertBySize(mmd, mmd->size);
         splitBlock(mmd, size);
+        mmd->is_free = false;
         mmd++;
         ptr = static_cast<void*>(mmd);
         std::memmove(ptr, oldp, oldsize);
@@ -437,11 +478,11 @@ void* srealloc(void* oldp, size_t size)
         }
         if(mmd->is_free)
         {
-            mmd->is_free = false;
             num_free_blocks--;
             num_free_bytes -= (size - enhance);
         }
         splitBlock(mmd, size); // maybe not needed
+        mmd->is_free = false;
         return oldp;
     }
     else if(mmd->next_by_memory && mmd->next_by_memory->is_free &&
@@ -452,6 +493,7 @@ void* srealloc(void* oldp, size_t size)
         combineBlocksAUX(mmd, mmd->next_by_memory, false, false);
         insertBySize(mmd, mmd->size);
         splitBlock(mmd, size);
+        mmd->is_free = false;
         return oldp;
     }
     else if(mmd->prev_by_memory && mmd->next_by_memory && 
@@ -465,6 +507,7 @@ void* srealloc(void* oldp, size_t size)
         combineBlocksAUX(mmd, mmd->next_by_memory, true, false);
         insertBySize(mmd, mmd->size);
         splitBlock(mmd, size);
+        mmd->is_free = false;
         mmd++;
         ptr = static_cast<void*>(mmd);
         std::memmove(ptr, oldp, oldsize);
@@ -494,6 +537,7 @@ void* srealloc(void* oldp, size_t size)
             return NULL;
         }
         insertBySize(mmd, size);
+        mmd->is_free = false;
         mmd++;
         ptr = static_cast<void*>(mmd);
         std::memmove(ptr, oldp, oldsize);

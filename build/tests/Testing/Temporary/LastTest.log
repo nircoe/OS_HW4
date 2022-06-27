@@ -1,22 +1,22 @@
-Start testing: Jun 27 16:47 UTC
+Start testing: Jun 27 21:45 UTC
 ----------------------------------------------------------
 1/88 Testing: malloc_1.Sanity
 1/88 Test: malloc_1.Sanity
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_1_test" "Sanity"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_1.Sanity" start time: Jun 27 16:47 UTC
+"malloc_1.Sanity" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Sanity
-Randomness seeded to: 2991640046
+Randomness seeded to: 3372561659
 ===============================================================================
 All tests passed (2 assertions in 1 test case)
 
 <end of output>
-Test time =   0.02 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_1.Sanity" end time: Jun 27 16:47 UTC
+"malloc_1.Sanity" end time: Jun 27 21:45 UTC
 "malloc_1.Sanity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -24,19 +24,19 @@ Test Passed.
 2/88 Test: malloc_1.Check size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_1_test" "Check size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_1.Check size" start time: Jun 27 16:47 UTC
+"malloc_1.Check size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Check size
-Randomness seeded to: 557948719
+Randomness seeded to: 4276108704
 ===============================================================================
 All tests passed (6 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_1.Check size" end time: Jun 27 16:47 UTC
+"malloc_1.Check size" end time: Jun 27 21:45 UTC
 "malloc_1.Check size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -44,11 +44,11 @@ Test Passed.
 3/88 Test: malloc_1.0 size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_1_test" "0 size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_1.0 size" start time: Jun 27 16:47 UTC
+"malloc_1.0 size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: 0 size
-Randomness seeded to: 1997609181
+Randomness seeded to: 84425835
 ===============================================================================
 All tests passed (2 assertions in 1 test case)
 
@@ -56,7 +56,7 @@ All tests passed (2 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_1.0 size" end time: Jun 27 16:47 UTC
+"malloc_1.0 size" end time: Jun 27 21:45 UTC
 "malloc_1.0 size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,11 +64,11 @@ Test Passed.
 4/88 Test: malloc_1.Max size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_1_test" "Max size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_1.Max size" start time: Jun 27 16:47 UTC
+"malloc_1.Max size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Max size
-Randomness seeded to: 22449900
+Randomness seeded to: 3817563862
 ===============================================================================
 All tests passed (4 assertions in 1 test case)
 
@@ -76,7 +76,7 @@ All tests passed (4 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_1.Max size" end time: Jun 27 16:47 UTC
+"malloc_1.Max size" end time: Jun 27 21:45 UTC
 "malloc_1.Max size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -84,19 +84,19 @@ Test Passed.
 5/88 Test: malloc_2.Sanity
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Sanity"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Sanity" start time: Jun 27 16:47 UTC
+"malloc_2.Sanity" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Sanity
-Randomness seeded to: 1409053380
+Randomness seeded to: 3957461213
 ===============================================================================
 All tests passed (19 assertions in 1 test case)
 
 <end of output>
-Test time =   0.02 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Sanity" end time: Jun 27 16:47 UTC
+"malloc_2.Sanity" end time: Jun 27 21:45 UTC
 "malloc_2.Sanity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -104,11 +104,11 @@ Test Passed.
 6/88 Test: malloc_2.Check size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Check size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Check size" start time: Jun 27 16:47 UTC
+"malloc_2.Check size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Check size
-Randomness seeded to: 1418705282
+Randomness seeded to: 3263212243
 ===============================================================================
 All tests passed (33 assertions in 1 test case)
 
@@ -116,7 +116,7 @@ All tests passed (33 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Check size" end time: Jun 27 16:47 UTC
+"malloc_2.Check size" end time: Jun 27 21:45 UTC
 "malloc_2.Check size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -124,11 +124,11 @@ Test Passed.
 7/88 Test: malloc_2.0 size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "0 size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.0 size" start time: Jun 27 16:47 UTC
+"malloc_2.0 size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: 0 size
-Randomness seeded to: 3581426924
+Randomness seeded to: 2012110750
 ===============================================================================
 All tests passed (13 assertions in 1 test case)
 
@@ -136,7 +136,7 @@ All tests passed (13 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.0 size" end time: Jun 27 16:47 UTC
+"malloc_2.0 size" end time: Jun 27 21:45 UTC
 "malloc_2.0 size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -144,19 +144,19 @@ Test Passed.
 8/88 Test: malloc_2.Max size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Max size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Max size" start time: Jun 27 16:47 UTC
+"malloc_2.Max size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Max size
-Randomness seeded to: 2901602656
+Randomness seeded to: 2684916780
 ===============================================================================
 All tests passed (27 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Max size" end time: Jun 27 16:47 UTC
+"malloc_2.Max size" end time: Jun 27 21:45 UTC
 "malloc_2.Max size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -164,11 +164,11 @@ Test Passed.
 9/88 Test: malloc_2.free
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "free"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.free" start time: Jun 27 16:47 UTC
+"malloc_2.free" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free
-Randomness seeded to: 1155057519
+Randomness seeded to: 3807092389
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
@@ -176,7 +176,7 @@ All tests passed (59 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.free" end time: Jun 27 16:47 UTC
+"malloc_2.free" end time: Jun 27 21:45 UTC
 "malloc_2.free" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -184,19 +184,19 @@ Test Passed.
 10/88 Test: malloc_2.free 2
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "free 2"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.free 2" start time: Jun 27 16:47 UTC
+"malloc_2.free 2" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free 2
-Randomness seeded to: 1113749563
+Randomness seeded to: 721088090
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.free 2" end time: Jun 27 16:47 UTC
+"malloc_2.free 2" end time: Jun 27 21:45 UTC
 "malloc_2.free 2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -204,11 +204,11 @@ Test Passed.
 11/88 Test: malloc_2.free 3
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "free 3"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.free 3" start time: Jun 27 16:47 UTC
+"malloc_2.free 3" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free 3
-Randomness seeded to: 67706854
+Randomness seeded to: 370726246
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
@@ -216,7 +216,7 @@ All tests passed (59 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.free 3" end time: Jun 27 16:47 UTC
+"malloc_2.free 3" end time: Jun 27 21:45 UTC
 "malloc_2.free 3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -224,19 +224,19 @@ Test Passed.
 12/88 Test: malloc_2.Reuse
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Reuse"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Reuse" start time: Jun 27 16:47 UTC
+"malloc_2.Reuse" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse
-Randomness seeded to: 986212943
+Randomness seeded to: 4279603077
 ===============================================================================
 All tests passed (32 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Reuse" end time: Jun 27 16:47 UTC
+"malloc_2.Reuse" end time: Jun 27 21:45 UTC
 "malloc_2.Reuse" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -244,19 +244,19 @@ Test Passed.
 13/88 Test: malloc_2.Reuse two blocks
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Reuse two blocks"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Reuse two blocks" start time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks
-Randomness seeded to: 2656426178
+Randomness seeded to: 1350995357
 ===============================================================================
 All tests passed (46 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Reuse two blocks" end time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks" end time: Jun 27 21:45 UTC
 "malloc_2.Reuse two blocks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -264,19 +264,19 @@ Test Passed.
 14/88 Test: malloc_2.Reuse two blocks reverse
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Reuse two blocks reverse"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Reuse two blocks reverse" start time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks reverse" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks reverse
-Randomness seeded to: 3529995025
+Randomness seeded to: 3794820308
 ===============================================================================
 All tests passed (46 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Reuse two blocks reverse" end time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks reverse" end time: Jun 27 21:45 UTC
 "malloc_2.Reuse two blocks reverse" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -284,11 +284,11 @@ Test Passed.
 15/88 Test: malloc_2.Reuse two blocks both
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Reuse two blocks both"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Reuse two blocks both" start time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks both" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks both
-Randomness seeded to: 2301575324
+Randomness seeded to: 789151951
 ===============================================================================
 All tests passed (46 assertions in 1 test case)
 
@@ -296,7 +296,7 @@ All tests passed (46 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Reuse two blocks both" end time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks both" end time: Jun 27 21:45 UTC
 "malloc_2.Reuse two blocks both" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -304,19 +304,19 @@ Test Passed.
 16/88 Test: malloc_2.Reuse two blocks sizes small
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Reuse two blocks sizes small"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Reuse two blocks sizes small" start time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks sizes small" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks sizes small
-Randomness seeded to: 2652349823
+Randomness seeded to: 1238223709
 ===============================================================================
 All tests passed (46 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Reuse two blocks sizes small" end time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks sizes small" end time: Jun 27 21:45 UTC
 "malloc_2.Reuse two blocks sizes small" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -324,11 +324,11 @@ Test Passed.
 17/88 Test: malloc_2.Reuse two blocks sizes large
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "Reuse two blocks sizes large"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.Reuse two blocks sizes large" start time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks sizes large" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks sizes large
-Randomness seeded to: 2553030632
+Randomness seeded to: 2980804442
 ===============================================================================
 All tests passed (46 assertions in 1 test case)
 
@@ -336,7 +336,7 @@ All tests passed (46 assertions in 1 test case)
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.Reuse two blocks sizes large" end time: Jun 27 16:47 UTC
+"malloc_2.Reuse two blocks sizes large" end time: Jun 27 21:45 UTC
 "malloc_2.Reuse two blocks sizes large" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -344,19 +344,19 @@ Test Passed.
 18/88 Test: malloc_2.scalloc
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "scalloc"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.scalloc" start time: Jun 27 16:47 UTC
+"malloc_2.scalloc" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc
-Randomness seeded to: 2622752806
+Randomness seeded to: 1351502771
 ===============================================================================
 All tests passed (51 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.scalloc" end time: Jun 27 16:47 UTC
+"malloc_2.scalloc" end time: Jun 27 21:45 UTC
 "malloc_2.scalloc" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -364,19 +364,19 @@ Test Passed.
 19/88 Test: malloc_2.scalloc taint
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "scalloc taint"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.scalloc taint" start time: Jun 27 16:47 UTC
+"malloc_2.scalloc taint" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc taint
-Randomness seeded to: 3280034615
+Randomness seeded to: 4212646217
 ===============================================================================
 All tests passed (232 assertions in 1 test case)
 
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.scalloc taint" end time: Jun 27 16:47 UTC
+"malloc_2.scalloc taint" end time: Jun 27 21:45 UTC
 "malloc_2.scalloc taint" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -384,11 +384,11 @@ Test Passed.
 20/88 Test: malloc_2.scalloc 0 size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "scalloc 0 size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.scalloc 0 size" start time: Jun 27 16:47 UTC
+"malloc_2.scalloc 0 size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc 0 size
-Randomness seeded to: 2479004754
+Randomness seeded to: 1584560763
 ===============================================================================
 All tests passed (21 assertions in 1 test case)
 
@@ -396,7 +396,7 @@ All tests passed (21 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.scalloc 0 size" end time: Jun 27 16:47 UTC
+"malloc_2.scalloc 0 size" end time: Jun 27 21:45 UTC
 "malloc_2.scalloc 0 size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -404,19 +404,19 @@ Test Passed.
 21/88 Test: malloc_2.scalloc Max size num
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "scalloc Max size num"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.scalloc Max size num" start time: Jun 27 16:47 UTC
+"malloc_2.scalloc Max size num" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc Max size num
-Randomness seeded to: 1314293777
+Randomness seeded to: 1203484323
 ===============================================================================
 All tests passed (27 assertions in 1 test case)
 
 <end of output>
-Test time =   0.07 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.scalloc Max size num" end time: Jun 27 16:47 UTC
+"malloc_2.scalloc Max size num" end time: Jun 27 21:45 UTC
 "malloc_2.scalloc Max size num" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -424,11 +424,11 @@ Test Passed.
 22/88 Test: malloc_2.scalloc Max size size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "scalloc Max size size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.scalloc Max size size" start time: Jun 27 16:47 UTC
+"malloc_2.scalloc Max size size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc Max size size
-Randomness seeded to: 75792377
+Randomness seeded to: 2013091183
 ===============================================================================
 All tests passed (27 assertions in 1 test case)
 
@@ -436,7 +436,7 @@ All tests passed (27 assertions in 1 test case)
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.scalloc Max size size" end time: Jun 27 16:47 UTC
+"malloc_2.scalloc Max size size" end time: Jun 27 21:45 UTC
 "malloc_2.scalloc Max size size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -444,11 +444,11 @@ Test Passed.
 23/88 Test: malloc_2.scalloc Max size both
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "scalloc Max size both"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.scalloc Max size both" start time: Jun 27 16:47 UTC
+"malloc_2.scalloc Max size both" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc Max size both
-Randomness seeded to: 535900711
+Randomness seeded to: 933059559
 ===============================================================================
 All tests passed (35 assertions in 1 test case)
 
@@ -456,7 +456,7 @@ All tests passed (35 assertions in 1 test case)
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.scalloc Max size both" end time: Jun 27 16:47 UTC
+"malloc_2.scalloc Max size both" end time: Jun 27 21:45 UTC
 "malloc_2.scalloc Max size both" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -464,19 +464,19 @@ Test Passed.
 24/88 Test: malloc_2.realloc
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "realloc"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.realloc" start time: Jun 27 16:47 UTC
+"malloc_2.realloc" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: realloc
-Randomness seeded to: 2941369059
+Randomness seeded to: 1308409756
 ===============================================================================
 All tests passed (36 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.realloc" end time: Jun 27 16:47 UTC
+"malloc_2.realloc" end time: Jun 27 21:45 UTC
 "malloc_2.realloc" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -484,11 +484,11 @@ Test Passed.
 25/88 Test: malloc_2.realloc shrink
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "realloc shrink"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.realloc shrink" start time: Jun 27 16:47 UTC
+"malloc_2.realloc shrink" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: realloc shrink
-Randomness seeded to: 1903216536
+Randomness seeded to: 1989373673
 ===============================================================================
 All tests passed (36 assertions in 1 test case)
 
@@ -496,7 +496,7 @@ All tests passed (36 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.realloc shrink" end time: Jun 27 16:47 UTC
+"malloc_2.realloc shrink" end time: Jun 27 21:45 UTC
 "malloc_2.realloc shrink" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -504,19 +504,19 @@ Test Passed.
 26/88 Test: malloc_2.srealloc Max size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_2_test" "srealloc Max size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_2.srealloc Max size" start time: Jun 27 16:47 UTC
+"malloc_2.srealloc Max size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc Max size
-Randomness seeded to: 308231675
+Randomness seeded to: 67316178
 ===============================================================================
 All tests passed (35 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_2.srealloc Max size" end time: Jun 27 16:47 UTC
+"malloc_2.srealloc Max size" end time: Jun 27 21:45 UTC
 "malloc_2.srealloc Max size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -524,19 +524,19 @@ Test Passed.
 27/88 Test: malloc_3.Sanity
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Sanity"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Sanity" start time: Jun 27 16:47 UTC
+"malloc_3.Sanity" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Sanity
-Randomness seeded to: 1429473755
+Randomness seeded to: 3591640509
 ===============================================================================
 All tests passed (18 assertions in 1 test case)
 
 <end of output>
-Test time =   0.02 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Sanity" end time: Jun 27 16:47 UTC
+"malloc_3.Sanity" end time: Jun 27 21:45 UTC
 "malloc_3.Sanity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -544,19 +544,19 @@ Test Passed.
 28/88 Test: malloc_3.Check size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Check size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Check size" start time: Jun 27 16:47 UTC
+"malloc_3.Check size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Check size
-Randomness seeded to: 3322407958
+Randomness seeded to: 424213365
 ===============================================================================
 All tests passed (33 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Check size" end time: Jun 27 16:47 UTC
+"malloc_3.Check size" end time: Jun 27 21:45 UTC
 "malloc_3.Check size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -564,19 +564,19 @@ Test Passed.
 29/88 Test: malloc_3.0 size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "0 size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.0 size" start time: Jun 27 16:47 UTC
+"malloc_3.0 size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: 0 size
-Randomness seeded to: 1806834981
+Randomness seeded to: 1682360830
 ===============================================================================
 All tests passed (13 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.0 size" end time: Jun 27 16:47 UTC
+"malloc_3.0 size" end time: Jun 27 21:45 UTC
 "malloc_3.0 size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -584,19 +584,19 @@ Test Passed.
 30/88 Test: malloc_3.Max size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Max size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Max size" start time: Jun 27 16:47 UTC
+"malloc_3.Max size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Max size
-Randomness seeded to: 3574644192
+Randomness seeded to: 280237453
 ===============================================================================
 All tests passed (26 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Max size" end time: Jun 27 16:47 UTC
+"malloc_3.Max size" end time: Jun 27 21:45 UTC
 "malloc_3.Max size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -604,19 +604,19 @@ Test Passed.
 31/88 Test: malloc_3.free
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "free"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.free" start time: Jun 27 16:47 UTC
+"malloc_3.free" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free
-Randomness seeded to: 2519608624
+Randomness seeded to: 2082089141
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.free" end time: Jun 27 16:47 UTC
+"malloc_3.free" end time: Jun 27 21:45 UTC
 "malloc_3.free" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -624,19 +624,19 @@ Test Passed.
 32/88 Test: malloc_3.free 2
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "free 2"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.free 2" start time: Jun 27 16:47 UTC
+"malloc_3.free 2" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free 2
-Randomness seeded to: 253267027
+Randomness seeded to: 361857801
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.free 2" end time: Jun 27 16:47 UTC
+"malloc_3.free 2" end time: Jun 27 21:45 UTC
 "malloc_3.free 2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -644,23 +644,19 @@ Test Passed.
 33/88 Test: malloc_3.free 3
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "free 3"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.free 3" start time: Jun 27 16:47 UTC
+"malloc_3.free 3" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free 3
-Randomness seeded to: 3459622575
-
-a address = 0x5644261f7030
-new_a address = 0x5644261f7030
-new_b address = 0x5644261f70f0 
+Randomness seeded to: 262627473
 ===============================================================================
-All tests passed (70 assertions in 1 test case)
+All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.free 3" end time: Jun 27 16:47 UTC
+"malloc_3.free 3" end time: Jun 27 21:45 UTC
 "malloc_3.free 3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -668,19 +664,19 @@ Test Passed.
 34/88 Test: malloc_3.free holes 1
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "free holes 1"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.free holes 1" start time: Jun 27 16:47 UTC
+"malloc_3.free holes 1" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free holes 1
-Randomness seeded to: 974854420
+Randomness seeded to: 4131455812
 ===============================================================================
 All tests passed (73 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.free holes 1" end time: Jun 27 16:47 UTC
+"malloc_3.free holes 1" end time: Jun 27 21:45 UTC
 "malloc_3.free holes 1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -688,19 +684,19 @@ Test Passed.
 35/88 Test: malloc_3.free holes 2
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "free holes 2"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.free holes 2" start time: Jun 27 16:47 UTC
+"malloc_3.free holes 2" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free holes 2
-Randomness seeded to: 2198979478
+Randomness seeded to: 3297105680
 ===============================================================================
 All tests passed (73 assertions in 1 test case)
 
 <end of output>
-Test time =   0.02 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.free holes 2" end time: Jun 27 16:47 UTC
+"malloc_3.free holes 2" end time: Jun 27 21:45 UTC
 "malloc_3.free holes 2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -708,19 +704,19 @@ Test Passed.
 36/88 Test: malloc_3.free holes 3
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "free holes 3"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.free holes 3" start time: Jun 27 16:47 UTC
+"malloc_3.free holes 3" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: free holes 3
-Randomness seeded to: 2197852523
+Randomness seeded to: 1540494270
 ===============================================================================
 All tests passed (73 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.free holes 3" end time: Jun 27 16:47 UTC
+"malloc_3.free holes 3" end time: Jun 27 21:45 UTC
 "malloc_3.free holes 3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -728,19 +724,19 @@ Test Passed.
 37/88 Test: malloc_3.Wilderness available
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Wilderness available"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Wilderness available" start time: Jun 27 16:47 UTC
+"malloc_3.Wilderness available" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Wilderness available
-Randomness seeded to: 3330318068
+Randomness seeded to: 3117483778
 ===============================================================================
 All tests passed (46 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Wilderness available" end time: Jun 27 16:47 UTC
+"malloc_3.Wilderness available" end time: Jun 27 21:45 UTC
 "malloc_3.Wilderness available" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -748,19 +744,19 @@ Test Passed.
 38/88 Test: malloc_3.Wilderness available pad
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Wilderness available pad"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Wilderness available pad" start time: Jun 27 16:47 UTC
+"malloc_3.Wilderness available pad" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Wilderness available pad
-Randomness seeded to: 513633996
+Randomness seeded to: 300802594
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Wilderness available pad" end time: Jun 27 16:47 UTC
+"malloc_3.Wilderness available pad" end time: Jun 27 21:45 UTC
 "malloc_3.Wilderness available pad" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -768,19 +764,19 @@ Test Passed.
 39/88 Test: malloc_3.Large allocation
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Large allocation"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Large allocation" start time: Jun 27 16:47 UTC
+"malloc_3.Large allocation" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Large allocation
-Randomness seeded to: 2786229673
+Randomness seeded to: 1583147219
 ===============================================================================
 All tests passed (32 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Large allocation" end time: Jun 27 16:47 UTC
+"malloc_3.Large allocation" end time: Jun 27 21:45 UTC
 "malloc_3.Large allocation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -788,19 +784,19 @@ Test Passed.
 40/88 Test: malloc_3.Large unaligned allocation
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Large unaligned allocation"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Large unaligned allocation" start time: Jun 27 16:47 UTC
+"malloc_3.Large unaligned allocation" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Large unaligned allocation
-Randomness seeded to: 2093985382
+Randomness seeded to: 851815727
 ===============================================================================
 All tests passed (19 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Large unaligned allocation" end time: Jun 27 16:47 UTC
+"malloc_3.Large unaligned allocation" end time: Jun 27 21:45 UTC
 "malloc_3.Large unaligned allocation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -808,19 +804,19 @@ Test Passed.
 41/88 Test: malloc_3.Alignment
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Alignment"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Alignment" start time: Jun 27 16:47 UTC
+"malloc_3.Alignment" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Alignment
-Randomness seeded to: 2821056741
+Randomness seeded to: 926027541
 ===============================================================================
 All tests passed (48 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Alignment" end time: Jun 27 16:47 UTC
+"malloc_3.Alignment" end time: Jun 27 21:45 UTC
 "malloc_3.Alignment" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -828,36 +824,19 @@ Test Passed.
 42/88 Test: malloc_3.Alignment unaligned base
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Alignment unaligned base"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Alignment unaligned base" start time: Jun 27 16:47 UTC
+"malloc_3.Alignment unaligned base" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Alignment unaligned base
-Randomness seeded to: 2018588140
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-Alignment unaligned base
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_basic.cpp:587
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_basic.cpp:604: FAILED:
-  REQUIRE( (size_t)a % 8 == 0 )
-with expansion:
-  3 == 0
-
+Randomness seeded to: 3096778899
 ===============================================================================
-test cases:  1 |  0 passed | 1 failed
-assertions: 12 | 11 passed | 1 failed
+All tests passed (50 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.Alignment unaligned base" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.Alignment unaligned base" end time: Jun 27 21:45 UTC
 "malloc_3.Alignment unaligned base" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -865,19 +844,19 @@ Test Failed.
 43/88 Test: malloc_3.Alignment MMAP
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Alignment MMAP"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Alignment MMAP" start time: Jun 27 16:47 UTC
+"malloc_3.Alignment MMAP" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Alignment MMAP
-Randomness seeded to: 1394156379
+Randomness seeded to: 3467272804
 ===============================================================================
 All tests passed (28 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Alignment MMAP" end time: Jun 27 16:47 UTC
+"malloc_3.Alignment MMAP" end time: Jun 27 21:45 UTC
 "malloc_3.Alignment MMAP" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -885,19 +864,19 @@ Test Passed.
 44/88 Test: malloc_3.Reuse
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Reuse"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Reuse" start time: Jun 27 16:47 UTC
+"malloc_3.Reuse" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse
-Randomness seeded to: 1789034086
+Randomness seeded to: 644375725
 ===============================================================================
 All tests passed (32 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Reuse" end time: Jun 27 16:47 UTC
+"malloc_3.Reuse" end time: Jun 27 21:45 UTC
 "malloc_3.Reuse" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -905,19 +884,19 @@ Test Passed.
 45/88 Test: malloc_3.Reuse two blocks
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Reuse two blocks"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Reuse two blocks" start time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks
-Randomness seeded to: 535845617
+Randomness seeded to: 2925356588
 ===============================================================================
 All tests passed (46 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Reuse two blocks" end time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks" end time: Jun 27 21:45 UTC
 "malloc_3.Reuse two blocks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -925,19 +904,19 @@ Test Passed.
 46/88 Test: malloc_3.Reuse two blocks reverse
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Reuse two blocks reverse"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Reuse two blocks reverse" start time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks reverse" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks reverse
-Randomness seeded to: 1493059423
+Randomness seeded to: 3120674354
 ===============================================================================
 All tests passed (46 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Reuse two blocks reverse" end time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks reverse" end time: Jun 27 21:45 UTC
 "malloc_3.Reuse two blocks reverse" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -945,19 +924,19 @@ Test Passed.
 47/88 Test: malloc_3.Reuse two blocks both
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Reuse two blocks both"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Reuse two blocks both" start time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks both" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks both
-Randomness seeded to: 3558384182
+Randomness seeded to: 2470352325
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Reuse two blocks both" end time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks both" end time: Jun 27 21:45 UTC
 "malloc_3.Reuse two blocks both" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -965,19 +944,19 @@ Test Passed.
 48/88 Test: malloc_3.Reuse two blocks sizes small
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Reuse two blocks sizes small"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Reuse two blocks sizes small" start time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks sizes small" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks sizes small
-Randomness seeded to: 1008615761
+Randomness seeded to: 790727217
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Reuse two blocks sizes small" end time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks sizes small" end time: Jun 27 21:45 UTC
 "malloc_3.Reuse two blocks sizes small" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -985,19 +964,19 @@ Test Passed.
 49/88 Test: malloc_3.Reuse two blocks sizes small reversed
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Reuse two blocks sizes small reversed"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Reuse two blocks sizes small reversed" start time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks sizes small reversed" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks sizes small reversed
-Randomness seeded to: 3473957569
+Randomness seeded to: 3671232812
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Reuse two blocks sizes small reversed" end time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks sizes small reversed" end time: Jun 27 21:45 UTC
 "malloc_3.Reuse two blocks sizes small reversed" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1005,19 +984,19 @@ Test Passed.
 50/88 Test: malloc_3.Reuse two blocks sizes large
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Reuse two blocks sizes large"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Reuse two blocks sizes large" start time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks sizes large" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Reuse two blocks sizes large
-Randomness seeded to: 2183251255
+Randomness seeded to: 1739382364
 ===============================================================================
 All tests passed (59 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Reuse two blocks sizes large" end time: Jun 27 16:47 UTC
+"malloc_3.Reuse two blocks sizes large" end time: Jun 27 21:45 UTC
 "malloc_3.Reuse two blocks sizes large" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1025,19 +1004,19 @@ Test Passed.
 51/88 Test: malloc_3.scalloc
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "scalloc"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.scalloc" start time: Jun 27 16:47 UTC
+"malloc_3.scalloc" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc
-Randomness seeded to: 2001824740
+Randomness seeded to: 889708024
 ===============================================================================
 All tests passed (51 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.scalloc" end time: Jun 27 16:47 UTC
+"malloc_3.scalloc" end time: Jun 27 21:45 UTC
 "malloc_3.scalloc" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1045,19 +1024,19 @@ Test Passed.
 52/88 Test: malloc_3.scalloc taint
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "scalloc taint"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.scalloc taint" start time: Jun 27 16:47 UTC
+"malloc_3.scalloc taint" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc taint
-Randomness seeded to: 567497788
+Randomness seeded to: 2541319286
 ===============================================================================
 All tests passed (232 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.scalloc taint" end time: Jun 27 16:47 UTC
+"malloc_3.scalloc taint" end time: Jun 27 21:45 UTC
 "malloc_3.scalloc taint" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1065,19 +1044,19 @@ Test Passed.
 53/88 Test: malloc_3.scalloc 0 size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "scalloc 0 size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.scalloc 0 size" start time: Jun 27 16:47 UTC
+"malloc_3.scalloc 0 size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc 0 size
-Randomness seeded to: 137777849
+Randomness seeded to: 1566595292
 ===============================================================================
 All tests passed (21 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.scalloc 0 size" end time: Jun 27 16:47 UTC
+"malloc_3.scalloc 0 size" end time: Jun 27 21:45 UTC
 "malloc_3.scalloc 0 size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1085,11 +1064,11 @@ Test Passed.
 54/88 Test: malloc_3.scalloc Max size num
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "scalloc Max size num"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.scalloc Max size num" start time: Jun 27 16:47 UTC
+"malloc_3.scalloc Max size num" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc Max size num
-Randomness seeded to: 3431527452
+Randomness seeded to: 3708656300
 ===============================================================================
 All tests passed (27 assertions in 1 test case)
 
@@ -1097,7 +1076,7 @@ All tests passed (27 assertions in 1 test case)
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.scalloc Max size num" end time: Jun 27 16:47 UTC
+"malloc_3.scalloc Max size num" end time: Jun 27 21:45 UTC
 "malloc_3.scalloc Max size num" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1105,19 +1084,19 @@ Test Passed.
 55/88 Test: malloc_3.scalloc Max size size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "scalloc Max size size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.scalloc Max size size" start time: Jun 27 16:47 UTC
+"malloc_3.scalloc Max size size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc Max size size
-Randomness seeded to: 3707195010
+Randomness seeded to: 2399985938
 ===============================================================================
 All tests passed (27 assertions in 1 test case)
 
 <end of output>
-Test time =   0.06 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.scalloc Max size size" end time: Jun 27 16:47 UTC
+"malloc_3.scalloc Max size size" end time: Jun 27 21:45 UTC
 "malloc_3.scalloc Max size size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1125,19 +1104,19 @@ Test Passed.
 56/88 Test: malloc_3.scalloc Max size both
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "scalloc Max size both"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.scalloc Max size both" start time: Jun 27 16:47 UTC
+"malloc_3.scalloc Max size both" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: scalloc Max size both
-Randomness seeded to: 2431083483
+Randomness seeded to: 3888131932
 ===============================================================================
 All tests passed (35 assertions in 1 test case)
 
 <end of output>
-Test time =   0.06 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.scalloc Max size both" end time: Jun 27 16:47 UTC
+"malloc_3.scalloc Max size both" end time: Jun 27 21:45 UTC
 "malloc_3.scalloc Max size both" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1145,11 +1124,11 @@ Test Passed.
 57/88 Test: malloc_3.Split block
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Split block"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Split block" start time: Jun 27 16:47 UTC
+"malloc_3.Split block" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Split block
-Randomness seeded to: 3952631910
+Randomness seeded to: 1432291973
 ===============================================================================
 All tests passed (32 assertions in 1 test case)
 
@@ -1157,7 +1136,7 @@ All tests passed (32 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Split block" end time: Jun 27 16:47 UTC
+"malloc_3.Split block" end time: Jun 27 21:45 UTC
 "malloc_3.Split block" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1165,11 +1144,11 @@ Test Passed.
 58/88 Test: malloc_3.Split block under threshold
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Split block under threshold"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Split block under threshold" start time: Jun 27 16:47 UTC
+"malloc_3.Split block under threshold" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Split block under threshold
-Randomness seeded to: 3227642156
+Randomness seeded to: 2233259050
 ===============================================================================
 All tests passed (32 assertions in 1 test case)
 
@@ -1177,7 +1156,7 @@ All tests passed (32 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Split block under threshold" end time: Jun 27 16:47 UTC
+"malloc_3.Split block under threshold" end time: Jun 27 21:45 UTC
 "malloc_3.Split block under threshold" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1185,19 +1164,19 @@ Test Passed.
 59/88 Test: malloc_3.Split block threshold
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Split block threshold"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Split block threshold" start time: Jun 27 16:47 UTC
+"malloc_3.Split block threshold" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Split block threshold
-Randomness seeded to: 1080474851
+Randomness seeded to: 3630547073
 ===============================================================================
 All tests passed (32 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Split block threshold" end time: Jun 27 16:47 UTC
+"malloc_3.Split block threshold" end time: Jun 27 21:45 UTC
 "malloc_3.Split block threshold" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1205,19 +1184,19 @@ Test Passed.
 60/88 Test: malloc_3.Merge with prev block
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Merge with prev block"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Merge with prev block" start time: Jun 27 16:47 UTC
+"malloc_3.Merge with prev block" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Merge with prev block
-Randomness seeded to: 782011388
+Randomness seeded to: 4127257058
 ===============================================================================
 All tests passed (32 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Merge with prev block" end time: Jun 27 16:47 UTC
+"malloc_3.Merge with prev block" end time: Jun 27 21:45 UTC
 "malloc_3.Merge with prev block" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1225,19 +1204,19 @@ Test Passed.
 61/88 Test: malloc_3.Merge with prev block pad
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Merge with prev block pad"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Merge with prev block pad" start time: Jun 27 16:47 UTC
+"malloc_3.Merge with prev block pad" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Merge with prev block pad
-Randomness seeded to: 1825750021
+Randomness seeded to: 1485222660
 ===============================================================================
 All tests passed (58 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Merge with prev block pad" end time: Jun 27 16:47 UTC
+"malloc_3.Merge with prev block pad" end time: Jun 27 21:45 UTC
 "malloc_3.Merge with prev block pad" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1245,11 +1224,11 @@ Test Passed.
 62/88 Test: malloc_3.Merge with next block
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Merge with next block"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Merge with next block" start time: Jun 27 16:47 UTC
+"malloc_3.Merge with next block" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Merge with next block
-Randomness seeded to: 3025555194
+Randomness seeded to: 247828489
 ===============================================================================
 All tests passed (32 assertions in 1 test case)
 
@@ -1257,7 +1236,7 @@ All tests passed (32 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Merge with next block" end time: Jun 27 16:47 UTC
+"malloc_3.Merge with next block" end time: Jun 27 21:45 UTC
 "malloc_3.Merge with next block" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1265,19 +1244,19 @@ Test Passed.
 63/88 Test: malloc_3.Merge with next block pad
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Merge with next block pad"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Merge with next block pad" start time: Jun 27 16:47 UTC
+"malloc_3.Merge with next block pad" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Merge with next block pad
-Randomness seeded to: 538146369
+Randomness seeded to: 792707209
 ===============================================================================
 All tests passed (58 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Merge with next block pad" end time: Jun 27 16:47 UTC
+"malloc_3.Merge with next block pad" end time: Jun 27 21:45 UTC
 "malloc_3.Merge with next block pad" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1285,19 +1264,19 @@ Test Passed.
 64/88 Test: malloc_3.Merge with both blocks
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Merge with both blocks"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Merge with both blocks" start time: Jun 27 16:47 UTC
+"malloc_3.Merge with both blocks" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Merge with both blocks
-Randomness seeded to: 3898977479
+Randomness seeded to: 504209527
 ===============================================================================
 All tests passed (47 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Merge with both blocks" end time: Jun 27 16:47 UTC
+"malloc_3.Merge with both blocks" end time: Jun 27 21:45 UTC
 "malloc_3.Merge with both blocks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1305,11 +1284,11 @@ Test Passed.
 65/88 Test: malloc_3.Merge with both blocks pad
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "Merge with both blocks pad"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.Merge with both blocks pad" start time: Jun 27 16:47 UTC
+"malloc_3.Merge with both blocks pad" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: Merge with both blocks pad
-Randomness seeded to: 2653500117
+Randomness seeded to: 894868503
 ===============================================================================
 All tests passed (73 assertions in 1 test case)
 
@@ -1317,7 +1296,7 @@ All tests passed (73 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.Merge with both blocks pad" end time: Jun 27 16:47 UTC
+"malloc_3.Merge with both blocks pad" end time: Jun 27 21:45 UTC
 "malloc_3.Merge with both blocks pad" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1325,11 +1304,11 @@ Test Passed.
 66/88 Test: malloc_3.realloc
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "realloc"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.realloc" start time: Jun 27 16:47 UTC
+"malloc_3.realloc" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: realloc
-Randomness seeded to: 2058374002
+Randomness seeded to: 2151505705
 ===============================================================================
 All tests passed (36 assertions in 1 test case)
 
@@ -1337,7 +1316,7 @@ All tests passed (36 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.realloc" end time: Jun 27 16:47 UTC
+"malloc_3.realloc" end time: Jun 27 21:45 UTC
 "malloc_3.realloc" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1345,19 +1324,19 @@ Test Passed.
 67/88 Test: malloc_3.realloc shrink
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "realloc shrink"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.realloc shrink" start time: Jun 27 16:47 UTC
+"malloc_3.realloc shrink" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: realloc shrink
-Randomness seeded to: 2333507044
+Randomness seeded to: 64729897
 ===============================================================================
 All tests passed (36 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.realloc shrink" end time: Jun 27 16:47 UTC
+"malloc_3.realloc shrink" end time: Jun 27 21:45 UTC
 "malloc_3.realloc shrink" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1365,19 +1344,19 @@ Test Passed.
 68/88 Test: malloc_3.srealloc Max size
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc Max size"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc Max size" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc Max size" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc Max size
-Randomness seeded to: 1514721672
+Randomness seeded to: 362606981
 ===============================================================================
 All tests passed (35 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc Max size" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc Max size" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc Max size" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1385,19 +1364,19 @@ Test Passed.
 69/88 Test: malloc_3.srealloc case a
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case a"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case a" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case a" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case a
-Randomness seeded to: 2688310182
+Randomness seeded to: 3100405210
 ===============================================================================
 All tests passed (112 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case a" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case a" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case a" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1405,36 +1384,23 @@ Test Passed.
 70/88 Test: malloc_3.srealloc case a split
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case a split"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case a split" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case a split" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case a split
-Randomness seeded to: 1631924355
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case a split
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:98
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:98: FAILED:
-  {Unknown expression after the reported line}
-due to a fatal error condition:
-  SIGSEGV - Segmentation violation signal
-
+Randomness seeded to: 3493550373
+populate didnt segfault
+realloc didnt segfault
+validate array didnt segfault
+free b didnt segfault
 ===============================================================================
-test cases:  1 |  0 passed | 1 failed
-assertions: 13 | 12 passed | 1 failed
+All tests passed (58 assertions in 1 test case)
 
 <end of output>
-Test time =   0.43 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case a split" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case a split" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case a split" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1442,36 +1408,19 @@ Test Failed.
 71/88 Test: malloc_3.srealloc case a mmap
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case a mmap"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case a mmap" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case a mmap" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case a mmap
-Randomness seeded to: 3690444967
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case a mmap
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:121
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:121: FAILED:
-  {Unknown expression after the reported line}
-due to a fatal error condition:
-  SIGSEGV - Segmentation violation signal
-
+Randomness seeded to: 2021130772
 ===============================================================================
-test cases:      1 |      0 passed | 1 failed
-assertions: 131093 | 131092 passed | 1 failed
+All tests passed (131098 assertions in 1 test case)
 
 <end of output>
-Test time =   0.18 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case a mmap" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case a mmap" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case a mmap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1479,36 +1428,19 @@ Test Failed.
 72/88 Test: malloc_3.srealloc case b
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case b"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case b" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case b" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case b
-Randomness seeded to: 4245713548
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case b
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:151
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:186: FAILED:
-  REQUIRE( _num_allocated_blocks() == 1 )
-with expansion:
-  2 == 1
-
+Randomness seeded to: 1795180544
 ===============================================================================
-test cases:   1 |   0 passed | 1 failed
-assertions: 101 | 100 passed | 1 failed
+All tests passed (106 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case b" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case b" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case b" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1516,36 +1448,19 @@ Test Failed.
 73/88 Test: malloc_3.srealloc case b metadata
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case b metadata"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case b metadata" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case b metadata" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case b metadata
-Randomness seeded to: 1233914698
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case b metadata
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:190
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:218: FAILED:
-  REQUIRE( _num_allocated_blocks() == 1 )
-with expansion:
-  2 == 1
-
+Randomness seeded to: 1688269605
 ===============================================================================
-test cases:  1 |  0 passed | 1 failed
-assertions: 61 | 60 passed | 1 failed
+All tests passed (66 assertions in 1 test case)
 
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case b metadata" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case b metadata" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case b metadata" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1553,36 +1468,19 @@ Test Failed.
 74/88 Test: malloc_3.srealloc case b split
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case b split"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case b split" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case b split" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case b split
-Randomness seeded to: 2572055760
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case b split
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:222
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:251: FAILED:
-  REQUIRE( _num_allocated_blocks() == 1 )
-with expansion:
-  2 == 1
-
+Randomness seeded to: 1191875705
 ===============================================================================
-test cases:  1 |  0 passed | 1 failed
-assertions: 61 | 60 passed | 1 failed
+All tests passed (66 assertions in 1 test case)
 
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case b split" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case b split" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case b split" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1590,11 +1488,11 @@ Test Failed.
 75/88 Test: malloc_3.srealloc case b wilderness
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case b wilderness"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case b wilderness" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case b wilderness" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case b wilderness
-Randomness seeded to: 2236265383
+Randomness seeded to: 209982925
 ===============================================================================
 All tests passed (65 assertions in 1 test case)
 
@@ -1602,7 +1500,7 @@ All tests passed (65 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case b wilderness" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case b wilderness" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case b wilderness" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1610,19 +1508,19 @@ Test Passed.
 76/88 Test: malloc_3.srealloc case b wilderness 2
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case b wilderness 2"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case b wilderness 2" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case b wilderness 2" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case b wilderness 2
-Randomness seeded to: 172344072
+Randomness seeded to: 2459456875
 ===============================================================================
 All tests passed (97 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case b wilderness 2" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case b wilderness 2" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case b wilderness 2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1630,11 +1528,11 @@ Test Passed.
 77/88 Test: malloc_3.srealloc case c
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case c"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case c" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case c" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case c
-Randomness seeded to: 3312408688
+Randomness seeded to: 927473055
 ===============================================================================
 All tests passed (90 assertions in 1 test case)
 
@@ -1642,7 +1540,7 @@ All tests passed (90 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case c" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case c" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case c" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1650,11 +1548,11 @@ Test Passed.
 78/88 Test: malloc_3.srealloc case c 2
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case c 2"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case c 2" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case c 2" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case c 2
-Randomness seeded to: 1100005123
+Randomness seeded to: 1323521521
 ===============================================================================
 All tests passed (97 assertions in 1 test case)
 
@@ -1662,7 +1560,7 @@ All tests passed (97 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case c 2" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case c 2" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case c 2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1670,11 +1568,11 @@ Test Passed.
 79/88 Test: malloc_3.srealloc case d
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case d"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case d" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case d" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case d
-Randomness seeded to: 2089365479
+Randomness seeded to: 2604479547
 ===============================================================================
 All tests passed (112 assertions in 1 test case)
 
@@ -1682,7 +1580,7 @@ All tests passed (112 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case d" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case d" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case d" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1690,19 +1588,19 @@ Test Passed.
 80/88 Test: malloc_3.srealloc case d metadata
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case d metadata"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case d metadata" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case d metadata" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case d metadata
-Randomness seeded to: 2659651531
+Randomness seeded to: 2158108984
 ===============================================================================
 All tests passed (72 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case d metadata" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case d metadata" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case d metadata" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1710,19 +1608,19 @@ Test Passed.
 81/88 Test: malloc_3.srealloc case d split
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case d split"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case d split" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case d split" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case d split
-Randomness seeded to: 4293065855
+Randomness seeded to: 252823954
 ===============================================================================
 All tests passed (72 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case d split" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case d split" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case d split" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1730,36 +1628,19 @@ Test Passed.
 82/88 Test: malloc_3.srealloc case e
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case e"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case e" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case e" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case e
-Randomness seeded to: 1841786204
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case e
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:478
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:512: FAILED:
-  REQUIRE( _num_free_blocks() == 1 )
-with expansion:
-  0 == 1
-
+Randomness seeded to: 1685873215
 ===============================================================================
-test cases:  1 |  0 passed | 1 failed
-assertions: 65 | 64 passed | 1 failed
+All tests passed (74 assertions in 1 test case)
 
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case e" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case e" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case e" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1767,36 +1648,19 @@ Test Failed.
 83/88 Test: malloc_3.srealloc case e no pad
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case e no pad"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case e no pad" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case e no pad" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case e no pad
-Randomness seeded to: 91903380
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case e no pad
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:521
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:553: FAILED:
-  REQUIRE( _num_free_blocks() == 1 )
-with expansion:
-  0 == 1
-
+Randomness seeded to: 1769200845
 ===============================================================================
-test cases:  1 |  0 passed | 1 failed
-assertions: 64 | 63 passed | 1 failed
+All tests passed (73 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case e no pad" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case e no pad" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case e no pad" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1804,36 +1668,19 @@ Test Failed.
 84/88 Test: malloc_3.srealloc case e split
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case e split"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case e split" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case e split" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case e split
-Randomness seeded to: 3395514816
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case e split
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:561
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:596: FAILED:
-  REQUIRE( _num_allocated_blocks() == 3 )
-with expansion:
-  4 == 3
-
+Randomness seeded to: 2873838696
 ===============================================================================
-test cases:   1 |   0 passed | 1 failed
-assertions: 135 | 134 passed | 1 failed
+All tests passed (146 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case e split" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case e split" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case e split" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1841,36 +1688,19 @@ Test Failed.
 85/88 Test: malloc_3.srealloc case fi
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case fi"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case fi" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case fi" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case fi
-Randomness seeded to: 665486951
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-malloc_3_test is a Catch2 v3.0.1 host application.
-Run with -? for options
-
--------------------------------------------------------------------------------
-srealloc case fi
--------------------------------------------------------------------------------
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:605
-...............................................................................
-
-/home/student/Desktop/OS_HW4/tests/malloc_3_test_srealloc_cases.cpp:637: FAILED:
-  REQUIRE( _num_free_blocks() == 1 )
-with expansion:
-  0 == 1
-
+Randomness seeded to: 3608357264
 ===============================================================================
-test cases:  1 |  0 passed | 1 failed
-assertions: 64 | 63 passed | 1 failed
+All tests passed (73 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"malloc_3.srealloc case fi" end time: Jun 27 16:47 UTC
+Test Passed.
+"malloc_3.srealloc case fi" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case fi" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1878,11 +1708,11 @@ Test Failed.
 86/88 Test: malloc_3.srealloc case fii
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case fii"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case fii" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case fii" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case fii
-Randomness seeded to: 712102328
+Randomness seeded to: 159039386
 ===============================================================================
 All tests passed (79 assertions in 1 test case)
 
@@ -1890,7 +1720,7 @@ All tests passed (79 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case fii" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case fii" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case fii" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1898,19 +1728,19 @@ Test Passed.
 87/88 Test: malloc_3.srealloc case g
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case g"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case g" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case g" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case g
-Randomness seeded to: 1297470034
+Randomness seeded to: 2950137438
 ===============================================================================
 All tests passed (74 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case g" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case g" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case g" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1918,11 +1748,11 @@ Test Passed.
 88/88 Test: malloc_3.srealloc case h
 Command: "/home/student/Desktop/OS_HW4/build/tests/malloc_3_test" "srealloc case h"
 Directory: /home/student/Desktop/OS_HW4/build/tests
-"malloc_3.srealloc case h" start time: Jun 27 16:47 UTC
+"malloc_3.srealloc case h" start time: Jun 27 21:45 UTC
 Output:
 ----------------------------------------------------------
 Filters: srealloc case h
-Randomness seeded to: 3590891578
+Randomness seeded to: 926591729
 ===============================================================================
 All tests passed (75 assertions in 1 test case)
 
@@ -1930,8 +1760,8 @@ All tests passed (75 assertions in 1 test case)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"malloc_3.srealloc case h" end time: Jun 27 16:47 UTC
+"malloc_3.srealloc case h" end time: Jun 27 21:45 UTC
 "malloc_3.srealloc case h" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 27 16:47 UTC
+End testing: Jun 27 21:45 UTC
